@@ -281,7 +281,7 @@ body {
 	height: 400%;
 	left: 0;
 	top: 0;
-	background-image: linear-gradient(45deg, #5B2A86, #DC6BAD , #FFE3D9);
+	background-image: linear-gradient(45deg, #53ffb7, #a0c6ff , #d9f9ff);
 	animation: bg-1 1s infinite alternate;
 }
 .menu__bg:hover::after{

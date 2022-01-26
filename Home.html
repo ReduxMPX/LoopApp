@@ -171,6 +171,18 @@ font-weight: 900;">9 Male</a><a style="
         <div class="card" style="
     margin-top: 35px;
 ">
+
+<script>
+		function sizeDetailRequest() {
+			sizeDetail.show("This pair is sold in size US 10 for males")
+		 }
+		    	
+		 function shippingDetailRequest() {
+			shippingDetail.show("This fee is charged to cover shipping")
+		 }
+		    
+	    </script>
+
             <div class="card-head">
               <img src="\SOLEWARE Assets\AJ LOGO WT.png" alt="logo" class="card-logo">
               <img src="\SOLEWARE Assets\JORDAN_UNVSBLUE_PNG.png" alt="YZY ZEBRA 350" class="product-img">
@@ -213,12 +225,12 @@ Air Jordan 1 Retro High OG <b>"UNIVERSITY BLUE"</b>
                           
                           <li></li>
                           <li>
-<a href="#" class="active" style="width: 55px;
+<a onclick="sizeDetailRequest()" class="active" style="width: 55px;
   margin-left: 5px;
 font-weight: 900;">10 Male</a><a style="
   margin-left: 15px;
   font-weight: 900;
-  " class="active" href="#">$9.50</a></li>
+  " class="active" onclick="shippingDetailRequest()">$9.50</a></li>
                           <li></li>
                         </ul>
                       </span>

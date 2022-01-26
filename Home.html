@@ -12,10 +12,6 @@
 <!-- pull the js file -->
   <script src="https://unpkg.com/toastedjs/dist/toasted.min.js"></script>
 
-  <script>
-    var toasted = new Toasted({ /* your options.. */ })
-    toasted.show('yo, toasted is directly here !!')
-  </script>
 	
   <script>
     function storeButton() {
@@ -33,6 +29,16 @@
       behavior: 'smooth'
     });
     }
+  </script>
+	
+  <script>
+	let sizeDetail = new Toasted({
+    position : 'top-right',
+    theme : 'colombo',
+    onComplete : () => {
+        console.log('User received size detail')
+    }
+	})	 
   </script>
 	
 </head>
@@ -105,7 +111,7 @@
                       </span>
               </div>
               <div class="product-properties">
-                <span class="product-size">
+                <span class="product-size" onClick="sizeDetail.show("test")">
                         <h4 style="
     margin-top: 10px;
     padding-bottom: 5px;

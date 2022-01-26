@@ -340,3 +340,19 @@ body {
 	position: fixed;
 	z-index: 999;
 }
+
+.RDXSALENUM{
+	position: relative;
+	font-size: 16px;
+	color: #FFFFFF;
+	font-family: system-ui;
+	font-weight: bold;
+}
+
+.RDXSALECAPTION{
+	position: relative;
+	font-size: 10px;
+	color: #cdcdcd;
+	font-family: system-ui;
+	font-weight: bold;
+}

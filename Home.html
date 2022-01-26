@@ -6,7 +6,17 @@
   <link rel="stylesheet" href="home-main.css">
 
   <script src="home-main.js"></script>
+<!-- pull the css -->
+  <link rel="stylesheet" href="https://unpkg.com/toastedjs/dist/toasted.min.css">
 
+<!-- pull the js file -->
+  <script src="https://unpkg.com/toastedjs/dist/toasted.min.js"></script>
+
+  <script>
+    var toasted = new Toasted({ /* your options.. */ })
+    toasted.show('yo, toasted is directly here !!')
+  </script>
+	
   <script>
     function storeButton() {
       alert("[REDUX-DEBUG] \nStore page selected")

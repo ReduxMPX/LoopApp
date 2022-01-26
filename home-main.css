@@ -261,17 +261,7 @@ body {
 	/* fill: #ddd6d9; */
 }
 
-.menu{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	width: 302px;
-	height: 70px;
-	border-radius: 20px;
-	background-color: white;
-	box-shadow: 0 0 30px rgba(176, 113, 140, 0.35);
-}
+
 .menu__bg{
 	position: relative;
 	width: 35px;
@@ -342,6 +332,18 @@ body {
     position: fixed;
     z-index: 999;
   }  
+
+  .menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 302px;
+	height: 70px;
+	border-radius: 20px;
+	background-color: white;
+	box-shadow: 0 0 30px rgba(176, 113, 140, 0.35);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -358,6 +360,22 @@ body {
     position: fixed;
     z-index: 999;
   }
+
+  .menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 302px;
+	height: 70px;
+	border-radius: 20px;
+	background: rgb(27 27 27 / 75%);
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 18px );
+	-webkit-backdrop-filter: blur( 18px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	}
 }
 
 .RDXSALENUM{

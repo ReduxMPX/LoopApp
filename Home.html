@@ -82,6 +82,17 @@
           <div class="card" style="
     margin-top: 100px;
 ">
+		  
+	    <script>
+		function sizeDetailRequest() {
+			sizeDetail.show("This pair is sold as US size 9 for males")
+		 }
+		    	
+		 function shippingDetailRequest() {
+			shippingDetail.show("This fee is charged in order to ship the shoes")
+		 }
+		    
+	    </script>
             <div class="card-head">
               <img src="\SOLEWARE Assets\YEEZY LOGO WT.png" alt="logo" class="card-logo">
               <img src="\SOLEWARE Assets\YEEZY_ZEBRA_PNG.png" alt="YZY ZEBRA 350" class="product-img">
@@ -111,7 +122,7 @@
                       </span>
               </div>
               <div class="product-properties">
-                <span class="product-size" onClick="sizeDetail.show("test")">
+                <span class="product-size">
                         <h4 style="
     margin-top: 10px;
     padding-bottom: 5px;
@@ -121,7 +132,7 @@
                           
                           <li></li>
                           <li>
-<a href="#" class="active" style="
+<a onclick="sizeDetailRequest()" class="active" style="
   margin-left: 5px;
 font-weight: 900;">9 Male</a><a style="
   margin-left: 15px;

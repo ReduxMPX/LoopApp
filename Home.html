@@ -42,6 +42,16 @@
         console.log('User received size detail')
     }
 	})	 
+
+    let shippingDetail = new Toasted({
+    position : 'top-right',
+    theme : 'venice',
+    icon : 'local_shipping',
+    onComplete : () => {
+        console.log('User received shipping detail')
+    }
+	})	 
+
   </script>
 	
 </head>
@@ -88,7 +98,7 @@
 		  
 	    <script>
 		function sizeDetailRequest() {
-			sizeDetail.show("This pair is sold as US size 9 for males")
+			sizeDetail.show("This pair is sold in size US 9 for males")
 		 }
 		    	
 		 function shippingDetailRequest() {
@@ -140,7 +150,7 @@
 font-weight: 900;">9 Male</a><a style="
   margin-left: 15px;
   font-weight: 900;
-  " class="active" href="#">$9.50</a></li>
+  " class="active" onclick="shippingDetailRequest()">$9.50</a></li>
                           <li></li>
                         </ul>
                       </span>

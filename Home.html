@@ -14,11 +14,15 @@
     }
 
     function eventsButton() {
-      alert("[REDUX-DEBUG] \nEvents page selected")
+      alert("[REDUX-DEBUG] \nEvent page selected")
     }
 
     function arrivalsButton() {
-      window.scrollTo(0, 0);
+      window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth'
+    });
     }
   </script>
 

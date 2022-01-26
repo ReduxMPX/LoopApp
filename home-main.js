@@ -1,1 +1,1 @@
-console.log("RDX Home V0.5")
+console.log("RDX Home V0.6")

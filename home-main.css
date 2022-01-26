@@ -342,7 +342,7 @@ body {
 }
 
 .RDXSALENUM{
-	position: relative;
+	position: static;
 	font-size: 16px;
 	color: #FFFFFF;
 	font-family: system-ui;
@@ -350,7 +350,7 @@ body {
 }
 
 .RDXSALECAPTION{
-	position: relative;
+	position: static;
 	font-size: 10px;
 	color: #cdcdcd;
 	font-family: system-ui;

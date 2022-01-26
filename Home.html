@@ -10,7 +10,15 @@
 
   <script>
     function storeButton() {
-      alert("[DEBUG] Store page selected")
+      alert("[REDUX-DEBUG] \nStore page selected")
+    }
+
+    function eventsButton() {
+      alert("[REDUX-DEBUG] \nEvents page selected")
+    }
+
+    function arrivalsButton() {
+      window.scrollTo(0, 0);
     }
   </script>
 
@@ -194,7 +202,7 @@ font-weight: 900;">10 Male</a><a style="
   margin: 0 auto;">
 	<div style="
     margin-top: -10;
-">
+" onclick="arrivalsButton()">
 		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#6979ff" class="bi bi-bell-fill" viewBox="0 0 16 16" alt="Icon">
   <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"></path> </svg> 
 	</div>
@@ -209,7 +217,7 @@ font-weight: 900;">10 Male</a><a style="
 
 	<div style="
     margin-top: -10;
-">
+" onclick="eventsButton()">
 		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ddd6d9" class="bi bi-calendar" viewBox="0 0 16 16">
   <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"></path>
 </svg>

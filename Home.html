@@ -1,4 +1,4 @@
-<html><head><meta charset="UTF-8">
+<html><head ><meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   
   <title>Home • SOLENET</title>
@@ -56,8 +56,7 @@
     });
     }
 
-    function currentEvent() {
-       let currentEvent = new Toasted({
+    let currentEvent = new Toasted({
         position : 'top-center',
         theme : 'bootstrap',
         type : 'info',
@@ -65,28 +64,28 @@
         duration : '10000',
         action : {
             text : 'JOIN',
-            onClick : enterEvent(),   
+            onClick : 'enterEvent()',   
         },
         onComplete : () => {
             console.log('User received event notification')
             }
       })
-    }
 
-    function showEvent() {
-        currentEvent.Show("Live raffles are taking place right now!")
-    }
+      function enterEvent() {
+          console.log("RDX ANALYTICAL: User from site went to event")
+          alert("REDUX-ERR-013: Feature incomplete atm \n-Alek")
+      }
 
-    function enterEvent() {
-        console.log("RDX ANALYTICAL: User from site went to event")
-        alert("REDUX-ERR-013: Feature incomplete atm \n-Alek")
-    }
+      function showEvent() {
+          console.log("Showing event notification")
+          currentEvent.show("Live raffles are taking place right now!")
+      }
   </script>
 	
 	
 <script src="chrome-extension://enegjkbbakeegngfapepobipndnebkdk/web3_insights_page.js"></script></head>
 
-  <body data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed="" onload="showEvent()"><div class="RDXTOPBAR">
+  <body onload="showEvent()" data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed="" ><div class="RDXTOPBAR">
     <img src="SOLEWARE Assets\Logos\COMPACT_TOPBARWIDESOLENET.png" style="
     height: 80;
     width: 160;
@@ -127,13 +126,13 @@
 ">
 		  
 	    <script>
-		function sizeDetailRequest() {
-			sizeDetail.show("This pair is sold in size US 9 for males")
-		 }
-		    	
-		 function shippingDetailRequest() {
-			shippingDetail.show("This fee is charged to cover shipping")
-		 }
+        function sizeDetailRequest() {
+          sizeDetail.show("This pair is sold in size US 9 for males")
+        }
+              
+        function shippingDetailRequest() {
+          shippingDetail.show("This fee is charged to cover shipping")
+        }
 		    
 	    </script>
             <div class="card-head">

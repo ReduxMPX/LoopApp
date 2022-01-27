@@ -4,8 +4,7 @@
   <title>Home • SOLENET</title>
   
   <link rel="stylesheet" href="home-main.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
   <script src="home-main.js"></script>
 <!-- pull the css -->
@@ -15,24 +14,7 @@
   <script src="https://unpkg.com/toastedjs/dist/toasted.min.js"></script>
 
 	
-  <script>
-    function storeButton() {
-      alert("[REDUX-DEBUG] \nStore page selected")
-    }
 
-    function eventsButton() {
-      alert("[REDUX-DEBUG] \nEvent page selected")
-    }
-
-    function arrivalsButton() {
-      window.scroll({
-      top: 0, 
-      left: 0, 
-      behavior: 'smooth'
-    });
-    }
-  </script>
-	
   <script>
 	let sizeDetail = new Toasted({
     position : 'top-right',
@@ -55,10 +37,56 @@
 	})	 
 
   </script>
-	
-</head>
 
-  <body data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed=""><div class="RDXTOPBAR">
+    
+  <script>
+    function storeButton() {
+      alert("[REDUX-DEBUG] \nStore page selected")
+    }
+
+    function eventsButton() {
+      alert("[REDUX-DEBUG] \nEvent page selected")
+    }
+
+    function arrivalsButton() {
+      window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth'
+    });
+    }
+
+    function currentEvent() {
+       let shippingDetail = new Toasted({
+        position : 'top-center',
+        theme : 'bootstrap',
+        type : 'info',
+        icon : 'sensors',
+        duration : '10000',
+        action : {
+            text : 'JOIN',
+            onClick : enterEvent(),   
+        },
+        onComplete : () => {
+            console.log('User received event notification')
+            }
+      })
+    }
+
+    function showEvent() {
+        currentEvent.show("Live raffles are taking place right now!")
+    }
+
+    function enterEvent() {
+        console.log("RDX ANALYTICAL: User from site went to event")
+        alert("REDUX-ERR-013: Feature incomplete atm \n-Alek")
+    }
+  </script>
+	
+	
+<script src="chrome-extension://enegjkbbakeegngfapepobipndnebkdk/web3_insights_page.js"></script></head>
+
+  <body data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed="" onload="showEvent()"><div class="RDXTOPBAR">
     <img src="SOLEWARE Assets\Logos\COMPACT_TOPBARWIDESOLENET.png" style="
     height: 80;
     width: 160;
@@ -283,4 +311,5 @@ font-weight: 900;">10 Male</a><a style="
   
   
   
-  <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></body></html>
+  <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</body></html>

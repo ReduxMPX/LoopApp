@@ -59,12 +59,12 @@
     let currentEvent = new Toasted({
         position : 'top-center',
         theme : 'bootstrap',
-        type : 'info',
+        type : 'normal',
         icon : 'sensors',
         fullWidth : true,
         duration : '10000',
         action : {
-            text : 'JOIN',
+            text : 'VIEW',
             onClick : 'enterEvent()',   
         },
         onComplete : () => {
@@ -79,7 +79,7 @@
 
       function showEvent() {
           console.log("Showing event notification")
-          currentEvent.show("Live raffles are taking place right now!")
+          currentEvent.show("Raffles are taking place!")
       }
   </script>
 	

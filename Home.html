@@ -65,7 +65,11 @@
         duration : '10000',
         action : {
             text : 'VIEW',
-            onclick : 'enterEvent()',   
+            onclick : 'enterEvent()', 
+            onClick : (e, toasted) => {
+            enterEvent()
+        }
+
         },
         onComplete : () => {
             console.log('User received event notification')

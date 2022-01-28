@@ -393,3 +393,14 @@ body {
 	font-family: system-ui;
 	font-weight: bold;
 }
+
+.RDXSECTIONHEADER{
+    font-size: 12px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(    45deg, #f9c58d, #f492f0 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    position: relative;
+    font-family: sans-serif;
+}

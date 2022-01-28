@@ -5,5 +5,5 @@ const solenetFacts = ["💜 SoleNet is run by one person!",
                       "📊 Our analytics are publicly visible!",
                       "📱 Our site is built specifically for the Instagram browser!"]
 
-var chosenFact = items[Math.floor(Math.random()*solenetFacts.length)];
+var chosenFact = solenetFacts[Math.floor(Math.random()*solenetFacts.length)];
 console.log(chosenFact)

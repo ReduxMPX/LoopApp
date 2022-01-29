@@ -5,6 +5,9 @@
     fullWidth : "true",
 	})	 
 
+var intervalID = window.setInterval(showFact, 120000);
+
+
 function showFact() {
   const solenetFacts = ["💜 SoleNet is run by one person!",
                       "📹 You should follow us on TikTok!",
@@ -16,7 +19,8 @@ function showFact() {
                       "💡 We love hearing your suggestions!",
                       "🚚 We provide detailed shipping statuses for each order!",
                       "💵 We accept a wide variety of payment methods!",
-                      "👟 All pairs shown are available!"]
+                      "👟 All pairs shown are available!",
+                      "👍🏼 All of our reviews are on our Instagram!"]
 
   var chosenFact = solenetFacts[Math.floor(Math.random()*solenetFacts.length)];
   console.log("Fact Displaying:" + chosenFact)   

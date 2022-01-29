@@ -2,6 +2,7 @@
     position : 'top-center',
     theme : 'venice',
     duration : '1500',
+    fullWidth : "true",
 	})	 
 
 function showFact() {

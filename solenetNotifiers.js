@@ -2,7 +2,6 @@
     position : 'top-center',
     theme : 'venice',
     duration : '1500',
-    }
 	})	 
 
 function showFact() {

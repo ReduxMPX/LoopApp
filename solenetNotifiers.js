@@ -14,7 +14,7 @@ function showFact() {
                       "📱 SoleNet hosts livestreams!",
                       "📍 SoleNet is based in LA!",
                       "📊 Our analytics are publicly visible!",
-                      "📱 Our site is built  Instagram!",
+                      "📱 Our site is built for our Instagram!",
                       "📦 Check out our shipping schedule!",
                       "💡 We love hearing your suggestions!",
                       "🚚 We provide detailed shipping statuses for each order!",

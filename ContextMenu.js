@@ -243,5 +243,3 @@ function removeMessage() {
 
 window.addEventListener("click", removeMessage);
 window.addEventListener("contextmenu", removeMessage);
-undefined
-solenetNotifiers.js:26 Fact Displaying:💡 We love hearing your suggestions!

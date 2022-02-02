@@ -1,5 +1,3 @@
-var checkNumber = 0
- 
  let solenetFactNotif = new Toasted({
     position : 'top-center',
     theme : 'venice',
@@ -29,7 +27,3 @@ function showFact() {
   solenetFactNotif.show(chosenFact)
 }
 
-function eventCheck() {
-  checkNumber += 1
-  console.log("Solenet Instagram Event Check Initiated")
-}

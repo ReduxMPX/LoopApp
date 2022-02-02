@@ -11,3 +11,7 @@ function showAgent() {
 function restartNet() {
     window.open("/Solenet", "_self")
 }
+
+function eventCheck() {
+    console.log("Solenet Instagram Event Check Initiated")
+  }

@@ -1,3 +1,5 @@
+var checkNumber = 0
+ 
  let solenetFactNotif = new Toasted({
     position : 'top-center',
     theme : 'venice',
@@ -25,4 +27,9 @@ function showFact() {
   var chosenFact = solenetFacts[Math.floor(Math.random()*solenetFacts.length)];
   console.log("Fact Displaying:" + chosenFact)   
   solenetFactNotif.show(chosenFact)
+}
+
+function eventCheck() {
+  checkNumber += 1
+  console.log("Solenet Instagram Event Check Initiated")
 }

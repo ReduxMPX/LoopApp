@@ -331,7 +331,7 @@ body {
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin-top: -135;
     position: fixed;
-    z-index: 999;
+    z-index: 1001;
   }  
 
   .menu{
@@ -359,7 +359,7 @@ body {
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin-top: -135;
     position: fixed;
-    z-index: 999;
+    z-index: 1001;
   }
 
   .menu{
@@ -415,7 +415,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 100;
+  z-index: 999;
   height: 100%;
   width: 100%;
   display: table;

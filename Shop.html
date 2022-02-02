@@ -8,7 +8,6 @@
       
     <script src="main.js"></script>
     <script src="ContextMenu.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <link rel="stylesheet" href="https://unpkg.com/toastedjs/dist/toasted.min.css">
     <link rel="stylesheet" href="ContextMenu.css" />
@@ -263,38 +262,4 @@
       window.addEventListener("contextmenu", removeMessage);
   </script>
 
-<script>
-  $(document).ready(function(){
-	// menu click event
-	$('.RDXSORTBUTTON').click(function() {
-		$(this).toggleClass('act');
-			if($(this).hasClass('act')) {
-				$('.mainMenu').addClass('act');
-			}
-			else {
-				$('.mainMenu').removeClass('act');
-			}
-	});
-});
-</script>
-
-<nav class="mainMenu">
-  <ul>
-    <li>
-      <a href="#">Intro</a>
-    </li>
-    <li>
-      <a href="#">Services</a>
-    </li>
-    <li>
-      <a href="#">Team</a>
-    </li>
-    <li>
-      <a href="#">Pricing</a>
-    </li>
-    <li>
-      <a href="#" class="suBtn">Sing Up</a>
-    </li>
-  </ul>
-</nav>
   </html>

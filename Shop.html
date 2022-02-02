@@ -213,12 +213,24 @@
             // You can use any event listener from here
           }
         },
-        { content: `${cutIcon}&nbsp;&nbsp;Emulate Gateway` },
-        { content: `${downloadIcon}&nbsp;&nbsp;User Agent` },
+        { content: `${cutIcon}&nbsp;&nbsp;Emulate Gateway`,
+        events: {
+            click: (e) => gatewayExit()
+            // mouseover: () => console.log("Copy Button Mouseover")
+            // You can use any event listener from here
+          }
+        },
+        { content: `${downloadIcon}&nbsp;&nbsp;User Agent`,
+        events: {
+            click: (e) => showAgent()
+            // mouseover: () => console.log("Copy Button Mouseover")
+            // You can use any event listener from here
+          }
+        },
         {
           content: `${deleteIcon}&nbsp;&nbsp;Reload Solenet`,
           events: {
-            click: (e) => showFact(),
+            click: (e) => restartNet(),
           },
           divider: "top" // top, bottom, top-bottom
         }

@@ -1,4 +1,5 @@
 console.log("RDX Home V0.8")
+let developerCM = true
 
 function gatewayExit() {
     window.close()

@@ -334,6 +334,7 @@ body {
     z-index: 999;
   }  
 
+
   .menu{
 	display: flex;
 	flex-direction: row;
@@ -360,6 +361,11 @@ body {
     margin-top: -135;
     position: fixed;
     z-index: 999;
+  }
+    
+  .RDXTOPBAR.clicked {
+    height: 300
+    transition: 130ms;
   }
 
   .menu{

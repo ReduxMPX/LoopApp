@@ -1,4 +1,4 @@
-console.log("RDX Home V0.9")
+console.log("Solenet Development V0.9")
 let developerCM = true
 
 function gatewayExit() {

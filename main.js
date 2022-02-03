@@ -1,6 +1,12 @@
 console.log("Solenet Development V0.9")
 let developerCM = true
 
+$('.RDXSORTBUTTON').on('click', function() {
+    $('.RDXTOPBAR').toggleClass('clicked');
+});
+
+
+
 function gatewayExit() {
     window.close()
 }

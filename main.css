@@ -364,7 +364,7 @@ body {
   }
     
   .RDXTOPBAR.clicked {
-    height: 300
+    height: 300px;
     transition: 130ms;
   }
 

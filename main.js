@@ -1,5 +1,4 @@
 console.log("Solenet Development V0.9")
-let developerCM = true
 
 function gatewayExit() {
     window.close()
@@ -17,4 +16,7 @@ function eventCheck() {
     console.log("Solenet Instagram Event Check Initiated")
   }
 
-
+function RDX_YZYSORT() {
+    console.log("Sorting Solenet Supply for: YEEZY")
+    alert("SYSERR ID ALEK-0350-01:\n[DEBUG]YEEZY category selected")
+}

@@ -395,6 +395,7 @@ body {
     font-family: sans-serif;
     font-weight: 1000;
     visibility: visible;
+    transition: 130ms;
 }
 
 
@@ -440,5 +441,5 @@ body {
     position: relative;
     font-family: sans-serif;
     font-weight: 1000;
-    visibility: hiddven;
+    visibility: hidden;
 }

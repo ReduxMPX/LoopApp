@@ -363,11 +363,6 @@ body {
     z-index: 999;
   }
     
-  .RDXTOPBAR.clicked {
-    height: 300px;
-    transition: 130ms;
-  }
-
   .menu{
 	display: flex;
 	flex-direction: row;
@@ -383,6 +378,12 @@ body {
 	border: 1px solid rgba( 255, 255, 255, 0.18 );
 	}
 }
+
+.RDXTOPBAR.clicked {
+    height: 300px;
+    transition: 130ms;
+  }
+
 
 .RDXSALENUM{
 	position: static;

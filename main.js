@@ -18,5 +18,5 @@ function eventCheck() {
 
 function RDX_YZYSORT() {
     console.log("Sorting Solenet Supply for: YEEZY")
-    alert("SYSERR ID ALEK-0350-01:\n[DEBUG]YEEZY category selected")
+    alert("SYSERR ID ALEK-0350-01:\n[DEBUG] YEEZY category selected")
 }

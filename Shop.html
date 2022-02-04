@@ -24,6 +24,10 @@
         if (loadStatus != "Y") {
           window.open("/Solenet","_Self")	
         }
+        
+      $('.RDXTOPBAR').on('click', function() {
+         $('.RDXTOPBAR').toggleClass('clicked');
+      });
       
       let sizeDetail = new Toasted({
       position : 'top-right',

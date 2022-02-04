@@ -405,6 +405,19 @@ body {
     visibility: hidden;
 }
 
+.RDXSORT-OW {
+    font-size: 6px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(    45deg, #92a3f4, #92d9f4 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    position: relative;
+    font-family: sans-serif;
+    font-weight: 1000;
+    visibility: hidden;
+}
+
 .RDXTOPBAR.clicked .RDXSORTBUTTON{
     fill: #dbf5ff;
     transition: 100ms;
@@ -422,6 +435,12 @@ body {
 }
 
  .RDXTOPBAR.clicked .RDXSORT-AJ{
+    font-size: 14px;
+    visibility: visible;
+    transition: 130ms;
+}
+
+ .RDXTOPBAR.clicked .RDXSORT-OW{
     font-size: 14px;
     visibility: visible;
     transition: 130ms;

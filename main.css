@@ -405,6 +405,10 @@ body {
     visibility: hidden;
 }
 
+.RDXTOPBAR.clicked .RDXSORTBUTTON{
+    fill: #dbf5ff;
+    transition: 100ms;
+}
 
 .RDXTOPBAR.clicked {
     height: 300px;
@@ -451,7 +455,4 @@ body {
     font-weight: 1000;
 }
 
-.RDXSORTBUTTON{
-
-}
 

@@ -25,3 +25,9 @@ function RDX_AJSORT() {
     console.log("Sorting Solenet Supply for: YEEZY")
     alert("SYSERR ID ALEK-0350-01:\n[DEBUG] AJ category selected")
 }
+
+function RDX_OWSORT() {
+    console.log("Sorting Solenet Supply for: YEEZY")
+    alert("SYSERR ID ALEK-0350-01:\n[DEBUG] OW category selected")
+}
+

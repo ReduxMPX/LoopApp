@@ -25,9 +25,6 @@
           window.open("/Solenet","_Self")	
         }
         
-      $('.RDXTOPBAR').on('click', function() {
-         $('.RDXTOPBAR').toggleClass('clicked');
-      });
       
       let sizeDetail = new Toasted({
       position : 'top-right',
@@ -269,5 +266,9 @@
       window.addEventListener("click", removeMessage);
       window.addEventListener("contextmenu", removeMessage);
   </script>
-
+  <script>
+     $('.RDXTOPBAR').on('click', function() {
+         $('.RDXTOPBAR').toggleClass('clicked');
+     });
+  </script>
   </html>

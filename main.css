@@ -379,13 +379,8 @@ body {
 	}
 }
 
-.RDXTOPBAR.clicked {
-    height: 300px;
-    transition: 130ms;
-  }
-
- .RDXTOPBAR.clicked .RDXSORT-YZY{
-    font-size: 8px;
+.RDXSORT-YZY{
+    font-size: 6px;
     font-weight: 800;
     background: -webkit-linear-gradient(    45deg, #8df9ea, #92a3f4 80%);
     -webkit-background-clip: text;
@@ -394,6 +389,17 @@ body {
     position: relative;
     font-family: sans-serif;
     font-weight: 1000;
+    visibility: hidden;
+}
+
+
+.RDXTOPBAR.clicked {
+    height: 300px;
+    transition: 130ms;
+  }
+
+ .RDXTOPBAR.clicked .RDXSORT-YZY{
+    font-size: 14px;
     visibility: visible;
     transition: 130ms;
 }
@@ -431,15 +437,3 @@ body {
 
 }
 
-.RDXSORT-YZY{
-    font-size: 8px;
-    font-weight: 800;
-    background: -webkit-linear-gradient(    45deg, #8df9ea, #92a3f4 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    position: relative;
-    font-family: sans-serif;
-    font-weight: 1000;
-    visibility: hidden;
-}

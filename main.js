@@ -30,21 +30,4 @@ function RDX_OWSORT() {
     console.log("Sorting Solenet Supply for: OFF-WHITE")
     alert("SYSERR ID ALEK-0350-01:\n[DEBUG] OW category selected")
 }
-function testFaceID() {
-    const options = {
-        publicKey: {
-            rp: { name: "example.com" },
-            user: {
-                name: "john.appleseed@example.com",
-                id: userIdBuffer,
-                displayName: "John Appleseed"
-            },
-            pubKeyCredParams: [ { type: "public-key", alg: -7 } ],
-            challenge: challengeBuffer,
-            authenticatorSelection: { authenticatorAttachment: "platform" }
-        }
-    };
-    
-    const publicKeyCredential = await navigator.credentials.create(options);
-    
-}
+

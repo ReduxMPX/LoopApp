@@ -345,7 +345,15 @@ body {
 	border-radius: 20px;
 	background-color: white;
 	box-shadow: 0 0 30px rgba(176, 113, 140, 0.35);
-    }
+  }
+
+  .RDXMENUDIVIDER {
+    border: 1px solid #f3f3f3;
+    border-radius: 50px;
+    width: 30%;
+    margin: 4 35% 8 35%;
+    visibility: hidden;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -377,6 +385,14 @@ body {
 	-webkit-backdrop-filter: blur( 18px );
 	border: 1px solid rgba( 255, 255, 255, 0.18 );
 	}
+
+  .RDXMENUDIVIDER {
+    border: 1px solid #3e3e3e;
+    border-radius: 50px;
+    width: 30%;
+    margin: 4 35% 8 35%;
+    visibility: hidden;
+  }
 }
 
 .RDXSORT-YZY{
@@ -494,13 +510,7 @@ body {
     user-select: none;
 }
 
-.RDXMENUDIVIDER {
-  border: 1px solid #3e3e3e;
-  border-radius: 50px;
-  width: 30%;
-  margin: 4 35% 8 35%;
-  visibility: hidden;
-}
+
 
  .RDXTOPBAR.clicked .RDXMENUDIVIDER{
   visibility: visible;

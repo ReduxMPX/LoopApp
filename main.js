@@ -31,3 +31,7 @@ function RDX_OWSORT() {
     alert("SYSERR ID ALEK-0350-01:\n[DEBUG] OW category selected")
 }
 
+function RDX_ALLPAIRS() {
+    console.log("Sorting Solenet Supply for: OFF-WHITE")
+    window.open("/Shop", "_Self")
+}

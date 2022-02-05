@@ -439,7 +439,7 @@ body {
 }
 
 .RDXTOPBAR.clicked {
-    height: 300px;
+    height: 350px;
     transition: 130ms;
   }
 
@@ -494,4 +494,14 @@ body {
     user-select: none;
 }
 
+.RDXMENUDIVIDER {
+  border: 1px solid #3e3e3e;
+  border-radius: 50px;
+  width: 30%;
+  margin: 4 35% 8 35%;
+  visibility: hidden;
+}
 
+ .RDXTOPBAR.clicked .RDXMENUDIVIDER{
+  visibility: visible;
+}

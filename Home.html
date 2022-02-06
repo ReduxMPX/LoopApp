@@ -13,10 +13,10 @@
 	<script src="/solenetNotifiers.js"></script>
 	
   <script>
-	var loadStatus = sessionStorage.getItem("solenetLoaded")
-	if (loadStatus != "Y") {
-	  window.open("/Solenet","_Self")	
-	}
+	// var loadStatus = sessionStorage.getItem("solenetLoaded")
+	// if (loadStatus != "Y") {
+	//   window.open("/Solenet","_Self")	
+	// }
 	  
 	  
 	  
@@ -46,7 +46,7 @@
     }
 
     function eventsButton() {
-      alert("[REDUX-DEBUG] \nEvent page selected")
+      window.open("/Events","_self")
     }
     function arrivalsButton() {
       window.scroll({

@@ -1,0 +1,170 @@
+<html><head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <title>Events • SOLENET</title>
+    
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/toastedjs/dist/toasted.min.css">
+    <script src="https://unpkg.com/toastedjs/dist/toasted.min.js"></script>
+      
+      <script src="/solenetNotifiers.js"></script>
+      
+    <script>
+      // var loadStatus = sessionStorage.getItem("solenetLoaded")
+      // if (loadStatus != "Y") {
+      //   window.open("/Solenet","_Self")	
+      // }
+        
+        
+        
+      let sizeDetail = new Toasted({
+      position : 'top-right',
+      theme : 'venice',
+      icon : 'view_in_ar',
+      duration : '1500',
+      onComplete : () => {
+          console.log('User received size detail')
+      }
+      })	 
+      let shippingDetail = new Toasted({
+      position : 'top-right',
+      theme : 'venice',
+      icon : 'local_shipping',
+      duration : '1500',
+      onComplete : () => {
+          console.log('User received shipping detail')
+      }
+      })	 
+    </script>
+  
+    <script>
+      function storeButton() {
+        window.open("/Shop","_self")
+      }
+  
+      function eventsButton() {
+        window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth'
+        });
+      }
+      
+      function arrivalsButton() {
+        window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth'
+      });
+      }
+      let currentEvent = new Toasted({
+          position : 'top-center',
+          theme : 'bootstrap',
+          icon : 'sensors',
+          fullWidth : true,
+          duration : '10000',
+          action : {
+              text : 'VIEW',
+              onclick : 'enterEvent()', 
+              onClick : (e, toasted) => {
+              enterEvent()
+          }
+          },
+          onComplete : () => {
+              console.log('User received event notification')
+              }
+        })
+        function enterEvent() {
+            console.log("RDX ANALYTICAL: User from site went to event")
+            alert("REDUX-ERR-013: Feature incomplete atm \n-Alek")
+        }
+        function showEvent() {
+            console.log("Showing event notification")
+            currentEvent.show("Raffles are taking place!")
+        }
+    </script>
+      
+      
+  </head>
+    <body onload="showFact()" data-new-gr-c-s-check-loaded="14.1047.0" data-gr-ext-installed=""><div class="RDXTOPBAR">
+      <img src="SOLEWARE Assets\Logos\COMPACT_TOPBARWIDESOLENET.png" style="
+      height: 80;
+      width: 160;
+      margin-left: -8px;
+      margin-bottom: 0px;
+      margin-top: 115px;
+      position: static;
+      ">
+  <div>
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#5afbb5" style="
+    margin-top: -50;
+    bottom: 60px;
+    left: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    float: right;
+    margin-right: 20px;
+"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+  </div>
+  </div>
+    <div class="RDXSECTIONHEADER" style="
+      top: 70px;
+  ">
+      UPCOMING EVENTS
+    </div>
+        <div class="container">
+            <div class="card" style="
+      margin-top: 75px;
+  ">
+            
+          <script>
+          function sizeDetailRequestLAP1() {
+            sizeDetail.show("This pair is sold in size US 9 for males")
+          }
+                
+          function shippingDetailRequestLAP1() {
+            shippingDetail.show("This fee is charged to cover shipping")
+          }
+              
+          </script>
+              
+              
+            </div>
+          </div>
+          
+          
+          
+          
+          
+    
+    <nav class="menu" style="z-index: 999;  left: 50%;
+    position: fixed; bottom: -1px;
+    transform: translate(-50%, -0%);
+    margin: 0 auto;">
+      <div style="
+      margin-top: -10;
+  " onclick="arrivalsButton()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" class="bi bi-bell-fill" viewBox="0 0 16 16" alt="Icon" fill="#ddd6d9">
+    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"></path> </svg> 
+      </div>
+      <div class="RDXTEMP1" style="
+      margin-top: -10;
+  " onclick="storeButton()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi bi-handbag-fill" viewBox="0 0 16 16" fill="#ddd6d9">
+    <path d="M8 1a2 2 0 0 0-2 2v2H5V3a3 3 0 1 1 6 0v2h-1V3a2 2 0 0 0-2-2zM5 5H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11v1.5a.5.5 0 0 1-1 0V5H6v1.5a.5.5 0 0 1-1 0V5z"></path>
+  </svg>
+      </div>
+      <div style="
+      margin-top: -10;" onclick="eventsButton()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#6979ff" class="bi bi-calendar" viewBox="0 0 16 16">
+    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"></path>
+  </svg>
+      </div></nav>
+    
+   
+  <div id="rJW07yagCF" class="toasted-container top-center full-width"></div><div id="H1WFyV6eCF" class="toasted-container top-center full-width"></div>
+  <div id="ByZ-GfT-At" class="toasted-container top-center full-width"></div>
+  </body></html>

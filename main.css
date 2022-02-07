@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+
 
 * {
   margin: 0;
@@ -583,9 +585,22 @@ body {
 .RDXEVENTSCARD-HEADER {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  font-weight: 900;
   text-transform: capitalize;
   color: #5de8ac;
   position: relative;
   top: 7px;
   left: 10px;
 }
+
+.RDXEVENTSCARD-ITEMNAME {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  text-transform: capitalize;
+  color: #c1ffe4;
+  position: relative;
+  top: 7px;
+  left: 10px;
+}
+

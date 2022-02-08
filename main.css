@@ -627,8 +627,13 @@ body {
   font-size: 10px;
   font-weight: 1000;
   text-transform: capitalize;
-  color: #c1ffe4;
-  position: absolute;
+  background: linear-gradient(to right, #5de8ac 0%, #a1f8d2 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font: {
+		size: 20vw;
+		family: $font;
+	};  position: absolute;  position: absolute;
   top: 40px;
   right: 15px;
 }

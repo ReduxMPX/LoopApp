@@ -607,10 +607,17 @@ body {
 .RDXEVENTSCARD-TIME {
   font-family: 'Montserrat', sans-serif;
   font-size: 22px;
-  font-weight: 1000;
+  font-weight: 1000; 
   text-transform: capitalize;
-  color: #c1ffe4;
-  position: absolute;
+
+  background: linear-gradient(to right, #5de8ac 0%, #c1ffe4 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font: {
+		size: 20vw;
+		family: $font;
+	};  position: absolute;
+	
   top: 15px;
   right: 15px;
 }

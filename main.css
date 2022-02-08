@@ -604,3 +604,24 @@ body {
   left: 10px;
 }
 
+.RDXEVENTSCARD-TIME {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 1000;
+  text-transform: capitalize;
+  color: #c1ffe4;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.RDXEVENTSCARD-TIMECAPTION {
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: 1000;
+  text-transform: capitalize;
+  color: #c1ffe4;
+  position: absolute;
+  top: 40px;
+  right: 15px;
+}

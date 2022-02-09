@@ -20,7 +20,7 @@
     console.log("User on Instagram webkit")
   }
   else {
-    suggestIGWEB.show("We recommend using the Instagram &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; browser instead for the best experience!")
+    suggestIGWEB.show("We recommend using the Instagram browser instead for the best experience!")
     console.warn("User not on Instagram webkit, sending Solenet browser change suggestion!")
   }
 
@@ -46,5 +46,8 @@ function showFact() {
     var chosenFact = solenetFacts[Math.floor(Math.random()*solenetFacts.length)];
     console.log("Fact Displaying:" + chosenFact)   
     solenetFactNotif.show(chosenFact)
+  }
+  else {
+    suggestIGWEB.show("We recommend using the Instagram browser instead for the best experience!")
   }
 }

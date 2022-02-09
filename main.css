@@ -660,6 +660,8 @@ body {
   user-select: none;
   -webkit-user-select: none;
   width: 180px;
+  left: 10px;
+  top: 12px;
 }
 
 .button-23:focus-visible {
@@ -682,5 +684,10 @@ body {
 
 .RDXEVENTSCARD.clicked {
   height: 300px;
+  transition: 130ms;
+}
+
+.RDXEVENTSCARD.clicked .button-23 {
+  top: 220px;
   transition: 130ms;
 }

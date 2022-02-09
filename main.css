@@ -679,3 +679,8 @@ body {
   cursor: not-allowed;
   opacity: 1;
 }
+
+.RDXEVENTSCARD.clicked {
+  height: 300px;
+  transition: 130ms;
+}

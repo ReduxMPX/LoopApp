@@ -29,7 +29,6 @@ var intervalID = window.setInterval(showFact, 80000);
 
 
 function showFact() {
-  if (browserAgentRaw.includes('Instagram')) { 
     const solenetFacts = ["💜 SoleNet is run by one person!",
     "📹 You should follow us on TikTok!",
     "📱 SoleNet hosts livestreams!",
@@ -46,5 +45,5 @@ function showFact() {
     var chosenFact = solenetFacts[Math.floor(Math.random()*solenetFacts.length)];
     console.log("Fact Displaying:" + chosenFact)   
     solenetFactNotif.show(chosenFact)
-  }
+  
 }

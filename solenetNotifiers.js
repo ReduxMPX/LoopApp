@@ -45,5 +45,4 @@ function showFact() {
     var chosenFact = solenetFacts[Math.floor(Math.random()*solenetFacts.length)];
     console.log("Fact Displaying:" + chosenFact)   
     solenetFactNotif.show(chosenFact)
-  
 }

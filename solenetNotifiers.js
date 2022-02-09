@@ -5,6 +5,16 @@
     fullWidth : "true",
 	})	 
 
+  let suggestIGWEB = new Toasted({
+    position: 'top-right',
+    theme: 'venice',
+    icon: 'announcement',
+    duration: '3500',
+    onComplete: () => {
+      console.log('User received IG suggestion')
+    }
+  })
+
 var intervalID = window.setInterval(showFact, 120000);
 
 

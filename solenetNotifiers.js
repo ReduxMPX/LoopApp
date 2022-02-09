@@ -47,7 +47,4 @@ function showFact() {
     console.log("Fact Displaying:" + chosenFact)   
     solenetFactNotif.show(chosenFact)
   }
-  else {
-    suggestIGWEB.show("We recommend using the Instagram browser instead for the best experience!")
-  }
 }

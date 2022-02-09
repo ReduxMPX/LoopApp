@@ -717,7 +717,7 @@ body {
 	color: #FFFFFF;
 	text-transform: uppercase;
 	left: 10px;
-	top: 105px;
+	top: 120px;
 	visibility: hidden;
 }
 
@@ -727,10 +727,10 @@ body {
 }
 
 .RDXEVENTSCARD-LABELBOX {
-	width: 55px;
+	width: 72px;
 	height: 25px;
 	left: 10px;
-	top: 122px;
+	top: 140px;
 	background: transparent;
 	border: 1px solid #61d0a1;
 	border-radius: 8px;

@@ -773,4 +773,20 @@ body {
   	transition: 160ms;
   	visibility: visible;
   }
-}
+
+  .RDXEVENTLIVEBADGE {
+    height: 15px;
+    width: 40px;
+    position: absolute;
+    background-color: #fe6a6a;
+    border-radius: 3px;
+  }
+  
+ .RDXEVENTLIVEBADGETAG {
+ 	font-size: 12px;
+ 	font-weight: 700;
+ 	font-family: sans-serif;
+ 	color: #FFFFFF;
+ 	line-height: 15px;
+ 	text-align: center;
+ }

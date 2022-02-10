@@ -21,6 +21,8 @@
     gtag('js', new Date());
 
     gtag('config', 'G-54NB51PLB2');
+
+    var solenetSaleCounterData;
   </script>
 
   <script>
@@ -28,9 +30,7 @@
 	// if (loadStatus != "Y") {
 	//   window.open("/Solenet","_Self")	
 	// }
-	  
-	  
-	  
+	    
 	let sizeDetail = new Toasted({
     position : 'top-right',
     theme : 'venice',
@@ -91,6 +91,8 @@
           console.log("Showing event notification")
           currentEvent.show("Raffles are taking place!")
       }
+
+
   </script>
 	
 	
@@ -104,8 +106,9 @@
     margin-top: 115px;
     position: static;
     ">
-<div>
-    <h1 class="RDXSALENUM" style="
+<div></div>
+
+    <h1 id="solenetSaleCountDisplay" class="RDXSALENUM" style="
     margin-top: -57;
     bottom: 60px;
     left: 0px;
@@ -113,7 +116,7 @@
     margin-bottom: 0px;
     float: right;
     margin-right: 35px;
-">311</h1>
+">ERR</h1>
 <h1 class="RDXSALECAPTION" style="
     margin-top: -35;
     bottom: 60px;
@@ -123,7 +126,23 @@
     margin-right: 10px;
     float: right;
 ">JANUARY SALES</h1>
-    
+<script>
+	// FETCHES THE SOLENET SALE COUNT FROM PUBLIC DATABASE
+
+	var url = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetSales/solenetSales.json";
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        solenetSaleCounterData = xhr.responseText;
+        document.getElementById("solenetSaleCountDisplay").innerHTML = solenetSaleCounterData;
+        console.log("Sale Data Received: " + xhr.status + "-S : " + xhr.responseText + "-D");
+    }};
+
+  xhr.send();
+</script>
 </div>
 </div>
   <div class="RDXSECTIONHEADER" style="
@@ -313,8 +332,6 @@ font-weight: 900;">10 Male</a><a style="
   <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"></path>
 </svg>
 	</div></nav>
-  
-  
  
 <div id="rJW07yagCF" class="toasted-container top-center full-width"></div><div id="H1WFyV6eCF" class="toasted-container top-center full-width"></div>
 <div id="ByZ-GfT-At" class="toasted-container top-center full-width"></div></body></html>

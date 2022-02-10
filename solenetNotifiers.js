@@ -8,7 +8,24 @@
 
   
 var intervalID = window.setInterval(showFact, 120000);
+var intervalID = window.setInterval(updateSaleCount, 3000);
 
+
+function updateSaleCount() {
+  var url = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetSales/solenetSales.json";
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        solenetSaleCounterData = xhr.responseText;
+        document.getElementById("solenetSaleCountDisplay").innerHTML = solenetSaleCounterData;
+        console.log("Sale Data Received: " + xhr.status + "-S : " + xhr.responseText + "-D");
+    }};
+
+  xhr.send();
+}
 
 function showFact() {
   const solenetFacts = ["💜 SoleNet is run by one person!",

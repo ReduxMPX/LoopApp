@@ -13,12 +13,12 @@
   
     xhr2.onreadystatechange = function () {
       if (xhr2.readyState === 4) {
-          solenetEventStatus = xhr2.responseText;
-          console.log("Event Data Received: " + xhr2.status + "-S : " + xhr2.responseText + "-D");
           if(xhr2.responseText == "{\"solenetLive\":true}") {
             console.log("Solenet is live, showing customer an event notification")
             setTimeout(() => { currentEvent.show("An event is taking place!")}, 3000);
-            sessionStorage.setItem("eventMarked", true)
+            if (sessionStorage.getItem("eventMarked") != true) {
+              sessionStorage.setItem("eventMarked", true)
+            }     
           }
           else {
               var intervalIDEvents = window.setInterval(checkforEvent, 5000);

@@ -6,18 +6,24 @@
 	})	 
 
   function checkforEvent() {
-    var url2 = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetLive/solenetLive.json";
+    var url2 = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetSales/solenetLive.json";
   
     var xhr2 = new XMLHttpRequest();
     xhr2.open("GET", url2);
   
     xhr2.onreadystatechange = function () {
       if (xhr2.readyState === 4) {
-          if(xhr2.responseText == "true") {
+          if(xhr2.responseText == "{\"solenetLive\":true}") {
             console.log("Solenet is live, showing customer an event notification")
             clearInterval(intervalIDEvents);            
             setTimeout(() => { currentEvent.show("An event is taking place!")}, 3000);
-      }};
+        }
+      }
+      else {
+        console.log("No live event found")
+      }
+      
+      ;
   
     xhr2.send();
     }

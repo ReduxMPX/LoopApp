@@ -20,6 +20,10 @@
             setTimeout(() => { currentEvent.show("An event is taking place!")}, 3000);
             sessionStorage.setItem("eventMarked", true)
           }
+          else {
+              var intervalIDEvents = window.setInterval(checkforEvent, 5000);
+              console.log("Starting event checker")
+          }
       }};
   
     xhr2.send();

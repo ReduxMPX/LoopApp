@@ -143,6 +143,27 @@
     }};
 
   xhr.send();
+
+  var url2 = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetSales/solenetLive.json";
+  
+    var xhr2 = new XMLHttpRequest();
+    xhr2.open("GET", url2);
+  
+    xhr2.onreadystatechange = function () {
+      if (xhr2.readyState === 4) {
+          solenetEventStatus = xhr2.responseText;
+          console.log("Event Data Received: " + xhr2.status + "-S : " + xhr2.responseText + "-D");
+          if(xhr2.responseText == "{\"solenetLive\":true}") {
+            console.log("Solenet is live, showing customer an event notification")
+            setTimeout(() => { currentEvent.show("An event is taking place!")}, 3000);
+            sessionStorage.setItem("eventMarked", true)
+          }
+          else (
+            console.log("Did not match event bool check conditions")
+          )
+      }};
+  
+    xhr2.send();
 </script>
 </div>
 </div>

@@ -5,28 +5,42 @@
     fullWidth : "true",
 	})	 
 
-  function checkforEvent() {
-    var url2 = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetLive/solenetLive";
-  
-    var xhr2 = new XMLHttpRequest();
-    xhr2.open("GET", url2);
-  
-    xhr2.onreadystatechange = function () {
-      if (xhr2.readyState === 4) {
-          if(xhr2.responseText == true) {
-            console.log("Solenet is live, showing customer an event notification")
-            clearInterval(intervalIDEvents);            
-            setTimeout(() => { currentEvent.show("An event is taking place!")}, 3000);
+let currentEvent = new Toasted({
+        position : 'top-center',
+        theme : 'bootstrap',
+        icon : 'sensors',
+        fullWidth : true,
+        duration : '10000',
+        action : {
+            text : 'VIEW',
+            onclick : 'enterEvent()', 
+            onClick : (e, toasted) => {
+            enterEvent()
         }
-      }
-      else {
-        console.log("No live event found")
-      }
-      
-      ;
+        },
+        onComplete : () => {
+            console.log('User received event notification')
+            }
+      })
+
+  function checkforEvent() {
+        var urlEvent = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetLive/solenetLive.json";
   
-    xhr2.send();
-    }
+    var xhrEvent = new XMLHttpRequest();
+    xhrEvent.open("GET", urlEvent);
+  
+    xhrEvent.onreadystatechange = function () {
+      if (xhrEvent.readyState === 4) {
+          solenetEventStatusData = xhrEvent.responseText;
+          console.log("Event Data Received: " + xhrEvent.status + "-S : " + xhrEvent.responseText + "-D");
+          if(solenetEventStatusData == "true") {
+              console.log("Live event found!")
+              setTimeout(() => {currentEvent.show("An event is live right now!")
+}, 2000);
+          }
+      }};
+  
+    xhrEvent.send();
   }
   
   function updateSaleCount() {

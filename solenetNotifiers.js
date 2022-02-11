@@ -15,10 +15,11 @@
       if (xhr2.readyState === 4) {
           if(xhr2.responseText == "{\"solenetLive\":true}") {
             console.log("Solenet is live, showing customer an event notification")
+            clearInterval(intervalIDEvents);            
             setTimeout(() => { currentEvent.show("An event is taking place!")}, 3000);
             if (sessionStorage.getItem("eventMarked") != true) {
               sessionStorage.setItem("eventMarked", true)
-            }            
+            }
           }
           else {
               var intervalIDEvents = window.setInterval(checkforEvent, 5000);
@@ -73,8 +74,3 @@ function homeLoad() {
 
 var intervalIDFact = window.setInterval(showFact, 120000);
 var intervalIDSales = window.setInterval(updateSaleCount, 3000);
-if (sessionStorage.getItem("eventMarked") != true) {
-  var intervalIDEvents = window.setInterval(checkforEvent, 5000);
-}
-
-

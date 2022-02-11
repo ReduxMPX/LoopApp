@@ -5,6 +5,11 @@
     fullWidth : "true",
 	})	 
 
+  function homeLoad() {
+    updateSaleCount()
+    checkforEvent()
+  }
+
   function checkforEvent() {
     var url2 = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetSales/solenetLive.json";
   

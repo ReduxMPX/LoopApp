@@ -13,7 +13,6 @@ let currentEvent = new Toasted({
         duration : '10000',
         action : {
             text : 'VIEW',
-            onclick : 'enterEvent()', 
             onClick : (e, toasted) => {
                window.open("/Events", "_Self")
         }

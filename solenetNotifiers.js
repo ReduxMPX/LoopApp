@@ -36,16 +36,16 @@
           solenetSaleCounterData = xhr.responseText;
           document.getElementById("solenetSaleCountDisplay").innerHTML = solenetSaleCounterData;
           console.log("Sale Data Received: " + xhr.status + "-S : " + xhr.responseText + "-D");
-          var intervalID = null
+          window.clearInterval(intervalIDEvents)
       }};
   
     xhr.send();
   }
   
-var intervalID = window.setInterval(showFact, 120000);
-var intervalID = window.setInterval(updateSaleCount, 3000);
+var intervalIDFact = window.setInterval(showFact, 120000);
+var intervalIDSales = window.setInterval(updateSaleCount, 3000);
 if (sessionStorage.getItem("eventMarked") != true) {
-  var intervalID = window.setInterval(checkforEvent, 5000);
+  var intervalIDEvents = window.setInterval(checkforEvent, 5000);
 }
 
 

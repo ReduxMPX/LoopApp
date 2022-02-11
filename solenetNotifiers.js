@@ -6,7 +6,7 @@
 	})	 
 
   function checkforEvent() {
-    var url2 = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetSales/SolenetLive/solenetLive.json";
+    var url2 = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetLive/solenetLive";
   
     var xhr2 = new XMLHttpRequest();
     xhr2.open("GET", url2);

@@ -12,19 +12,22 @@
     xhr2.open("GET", url2);
   
     xhr2.onreadystatechange = function () {
+      if (xhr2.readyState === 4) {
           if(xhr2.responseText == "{\"solenetLive\":true}") {
             console.log("Solenet is live, showing customer an event notification")
             setTimeout(() => { currentEvent.show("An event is taking place!")}, 3000);
             if (sessionStorage.getItem("eventMarked") != true) {
               sessionStorage.setItem("eventMarked", true)
-            }     
+            }            
           }
           else {
               var intervalIDEvents = window.setInterval(checkforEvent, 5000);
               console.log("Starting event checker")
           }
       }};
+  
     xhr2.send();
+  }
   
   function updateSaleCount() {
     var url = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetSales/solenetSales.json";

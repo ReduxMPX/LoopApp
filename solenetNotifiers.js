@@ -17,14 +17,6 @@
             console.log("Solenet is live, showing customer an event notification")
             clearInterval(intervalIDEvents);            
             setTimeout(() => { currentEvent.show("An event is taking place!")}, 3000);
-            if (sessionStorage.getItem("eventMarked") != true) {
-              sessionStorage.setItem("eventMarked", true)
-            }
-          }
-          else {
-              var intervalIDEvents = window.setInterval(checkforEvent, 5000);
-              console.log("Starting event checker")
-          }
       }};
   
     xhr2.send();

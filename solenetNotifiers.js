@@ -42,19 +42,6 @@
     xhr.send();
   }
   
-function homeLoad() {
-    updateSaleCount()
-    checkforEvent()
-  }
-
-var intervalIDFact = window.setInterval(showFact, 120000);
-var intervalIDSales = window.setInterval(updateSaleCount, 3000);
-if (sessionStorage.getItem("eventMarked") != true) {
-  var intervalIDEvents = window.setInterval(checkforEvent, 5000);
-}
-
-
-
 function showFact() {
   const solenetFacts = ["💜 SoleNet is run by one person!",
                       "📹 You should follow us on TikTok!",
@@ -73,4 +60,17 @@ function showFact() {
   console.log("Fact Displaying:" + chosenFact)   
   solenetFactNotif.show(chosenFact)
 }
+
+function homeLoad() {
+    updateSaleCount()
+    checkforEvent()
+    showFact()
+  }
+
+var intervalIDFact = window.setInterval(showFact, 120000);
+var intervalIDSales = window.setInterval(updateSaleCount, 3000);
+if (sessionStorage.getItem("eventMarked") != true) {
+  var intervalIDEvents = window.setInterval(checkforEvent, 5000);
+}
+
 

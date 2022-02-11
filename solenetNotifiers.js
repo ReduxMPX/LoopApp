@@ -33,7 +33,6 @@
           solenetSaleCounterData = xhr.responseText;
           document.getElementById("solenetSaleCountDisplay").innerHTML = solenetSaleCounterData;
           console.log("Sale Data Received: " + xhr.status + "-S : " + xhr.responseText + "-D");
-          window.clearInterval(intervalIDEvents)
       }};
   
     xhr.send();

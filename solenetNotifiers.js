@@ -20,6 +20,7 @@
       }};
   
     xhr2.send();
+    }
   }
   
   function updateSaleCount() {

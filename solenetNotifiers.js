@@ -15,7 +15,7 @@ let currentEvent = new Toasted({
             text : 'VIEW',
             onclick : 'enterEvent()', 
             onClick : (e, toasted) => {
-            enterEvent()
+               window.open("/Events", "_Self")
         }
         },
         onComplete : () => {

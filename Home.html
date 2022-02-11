@@ -101,8 +101,8 @@
             console.log("Event Data Received: " + xhr2.status + "-S : " + xhr2.responseText + "-D");
             if(xhr2.responseText == "true") {
               console.log("Solenet is live, showing customer an event notification")
-              solenetFactNotice.destroy
-              currentEvent.show("An event is taking place!")
+              setTimeout(() => { currentEvent.show("An event is taking place!")}, 3000);
+
             }
         }};
 

@@ -85,12 +85,28 @@
       })
       function enterEvent() {
           console.log("RDX ANALYTICAL: User from site went to event")
-          alert("REDUX-ERR-013: Feature incomplete atm \n-Alek")
+          window.open("/Events", "_Self")
       }
-      function showEvent() {
-          console.log("Showing event notification")
-          currentEvent.show("Raffles are taking place!")
-      }
+
+	// CHECKS WHETHER SOLENET HAS A LIVE EVENT ATM
+
+      var url = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetSales/solenetLive.json";
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url);
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            solenetEventStatus = xhr.responseText;
+            console.log("Event Data Received: " + xhr.status + "-S : " + xhr.responseText + "-D");
+            if(solenetEventStatus == "true") {
+              console.log("Solenet is live, showing customer an event notification")
+              currentEvent.show("An event is taking place!")
+            }
+        }};
+
+      xhr.send();
+
 
 
   </script>

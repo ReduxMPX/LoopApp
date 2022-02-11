@@ -5,11 +5,6 @@
     fullWidth : "true",
 	})	 
 
-  function homeLoad() {
-    updateSaleCount()
-    checkforEvent()
-  }
-
   function checkforEvent() {
     var url2 = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetSales/solenetLive.json";
   
@@ -47,6 +42,11 @@
     xhr.send();
   }
   
+function homeLoad() {
+    updateSaleCount()
+    checkforEvent()
+  }
+
 var intervalIDFact = window.setInterval(showFact, 120000);
 var intervalIDSales = window.setInterval(updateSaleCount, 3000);
 if (sessionStorage.getItem("eventMarked") != true) {

@@ -79,7 +79,7 @@ function showFact() {
 
 function homeLoad() {
     updateSaleCount()
-    checkforEvent()
+    // checkforEvent()
     showFact()
   }
 

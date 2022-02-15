@@ -840,5 +840,9 @@ body {
 
 .RDXEVENTSCARD.clicked .button-23-notif {
   visibility: visible;
-  transition: 180ms;
+  transition: 280ms;
+}
+
+.button-23-notif.clicked {
+  background-color: #66dfab;
 }

@@ -33,9 +33,7 @@
     // }
 
 
-    function enableEventNotifications(eventID) {
-        window.prompt("We will notify you through a text message\nPlease enter your phone number below:")
-    }
+
 
 
     let sizeDetail = new Toasted({
@@ -56,6 +54,45 @@
         console.log('User received shipping detail')
       }
     })
+
+    let eventNotificationSuccess = new Toasted({
+      position: 'top-center',
+      theme: 'bootstrap',
+      type: 'success',
+      icon: 'chat',
+      fullWidth: true,
+      duration: '5000',
+      onComplete: () => {
+        console.log('User received phone success detail')
+      }
+    })
+
+    let eventNotificationInvalid = new Toasted({
+      position: 'top-center',
+      theme: 'bootstrap',
+      type: 'error',
+      icon: 'sms_failed',
+      fullWidth: true,
+      duration: '5000',
+      onComplete: () => {
+        console.log('User received phone failure details')
+      }
+    })
+
+    function enableEventNotifications(eventID) {
+        var notificationNumber = prompt("We will notify you through a text message\nPlease enter your phone number below:")
+
+        if(notificationNumber.match(/^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/)) {
+          console.log("Phone number successfully matched to RegEx")
+          eventNotificationSuccess.show("We'll let you know through a text!")
+          $(eventID).toggleClass('clicked');
+        }
+        else {
+          console.log("Invalid phone number entered on notification request by Solenet client")
+          eventNotificationInvalid.show("Invalid phone number entered!")
+        }
+      }
+
 
     function eventEXIG() {
       // Opens Solenet Instagram through SVG on event page topbar
@@ -181,7 +218,7 @@
 </div><p class="RDXEVENTSCARD-LABELBOXCAPTION" style="top: 235px">💳 PRIZE VALUE</p><div class="RDXEVENTSCARD-LABELBOX" style="width: 110px; top: 255px">
     <p class="RDXEVENTSCARD-LABELTAG">USD $265.00+</p>
 </div><button class="button-23" id="RAFFLE02-22BTN" role="button">Event Info</button>
-      <button class="button-23-notif" id="RAFFLE02-22-NOTIFBTN" onclick="enableEventNotifications()" role="button" style="
+      <button class="button-23-notif" id="RAFFLE02-22-NOTIFBTN" role="button" style="
     position:  absolute;
     width: 5px;
     top: 298px;
@@ -197,8 +234,11 @@
 ">
 
 <script>
+var eventIDPREPASS = "#RAFFLE02-22-NOTIFBTN"
+
   $('#RAFFLE02-22-NOTIFBTN').on('click', function () {
-    $('#RAFFLE02-22-NOTIFBTN').toggleClass('clicked');
+
+    enableEventNotifications(eventIDPREPASS)
   });
 </script>
 

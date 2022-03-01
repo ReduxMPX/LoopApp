@@ -1,0 +1,311 @@
+<html><head><meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>Shop • SOLENET</title>
+  
+  <link rel="stylesheet" href="main.css"></head><body data-new-gr-c-s-check-loaded="14.1051.0" data-gr-ext-installed="">ck
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <script src="ContextMenu.js"></script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/toastedjs/dist/toasted.min.css">
+  <link rel="stylesheet" href="ContextMenu.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/toastedjs/dist/toasted.min.js"></script>
+
+  <script src="main.js"></script>
+  <script src="/solenetNotifiers.js"></script>
+
+    <!--Solenet uses Google Analytics to offer the best experience to buyers.-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-54NB51PLB2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-54NB51PLB2');
+    </script>
+  
+  <script>
+    // var loadStatus = sessionStorage.getItem("solenetLoaded")
+    //   if (loadStatus != "Y") {
+    //     window.open("/Solenet","_Self")	
+    //   }
+      
+    
+    let sizeDetail = new Toasted({
+    position : 'top-right',
+    theme : 'venice',
+    icon : 'view_in_ar',
+    duration : '1500',
+    onComplete : () => {
+        console.log('User received size detail')
+    }
+    })	 
+
+    let shippingDetail = new Toasted({
+    position : 'top-right',
+    theme : 'venice',
+    icon : 'local_shipping',
+    duration : '1500',
+    onComplete : () => {
+        console.log('User received shipping detail')
+    }
+    })	 
+
+  </script>
+
+    
+  <script>
+    function storeButton() {
+      window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth'
+      });
+    }
+
+    function eventsButton() {
+      window.open("/Events","_self")
+    }
+
+    function arrivalsButton() {
+      window.open("/Home","_self")
+    }
+
+    let currentEvent = new Toasted({
+        position : 'top-center',
+        theme : 'bootstrap',
+        icon : 'sensors',
+        fullWidth : true,
+        duration : '10000',
+        action : {
+            text : 'VIEW',
+            onclick : 'enterEvent()', 
+            onClick : (e, toasted) => {
+            enterEvent()
+        }
+
+        },
+        onComplete : () => {
+            console.log('User received event notification')
+            }
+      })
+
+      function enterEvent() {
+          console.log("RDX ANALYTICAL: User from site went to event")
+          alert("REDUX-ERR-013: Feature incomplete atm \n-Alek")
+      }
+
+      function showEvent() {
+          console.log("Showing event notification")
+          currentEvent.show("Raffles are taking place!")
+      }
+  </script>
+    
+    
+
+
+  <div class="RDXTOPBAR" style="top: 0px;">
+    <img src="SOLEWARE Assets\Logos\COMPACT_TOPBARWIDESOLENET.png" style="
+    height: 80;
+    width: 160;
+    margin-left: -8px;
+    margin-bottom: 0px;
+    margin-top: 115px;
+    position: static;
+    ">
+
+<div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#5afbb5" class="RDXSORTBUTTON" viewBox="0 0 16 16" style="
+    margin-top: -50;
+    bottom: 60px;
+    left: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    float: right;
+    margin-right: 20px;
+">
+<path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path>
+<path d="M6 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"></path>
+</svg>
+
+    
+</div>
+      
+ <div class="RDXSORT-AP" onclick="RDX_ALLPAIRS()" style="color: #dbf5ff; top: -8px; ">
+    ALL PAIRS
+ </div>
+
+ <hr class="RDXMENUDIVIDER">
+ 
+
+      
+<div class="RDXSORT-AJ" onclick="RDX_AJSORT()" style="top: 0px; ">
+    NIKE
+ </div><div class="RDXSORT-YZY" onclick="RDX_YZYSORT()" style="top: 8px;">
+    YEEZY
+ </div><div class="RDXSORT-OW" onclick="RDX_OWSORT()" style="top: 16px; ">
+    OFF-WHITE
+ </div><div class="RDXSORT-OTHER" onclick="RDX_OTHERSORT()" style="top: 24px; ">
+    MORE
+ </div></div>
+
+  <div class="RDXSECTIONHEADER" style="
+    top: 50px;
+">
+    OOPS! WE DON'T HAVE ANY YEEZYS IN STOCK
+  </div>
+
+      <div class="container">
+          <div>
+<button class="button-34" role="button">Return</button>
+                      
+          </div>
+        </div>
+        
+        
+        
+        
+        
+  
+  <nav class="menu" style="z-index: 999;  left: 50%;
+  position: fixed; bottom: -1px;
+  transform: translate(-50%, -0%);
+  margin: 0 auto;">
+
+    <div style="
+    margin-top: -10;
+" onclick="arrivalsButton()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ddd6d9" class="bi bi-bell-fill" viewBox="0 0 16 16" alt="Icon">
+  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"></path> </svg> 
+    </div>
+
+    <div class="RDXTEMP1" style="
+    margin-top: -10;
+" onclick="storeButton()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi bi-handbag-fill" viewBox="0 0 16 16" fill="#6979ff">
+  <path d="M8 1a2 2 0 0 0-2 2v2H5V3a3 3 0 1 1 6 0v2h-1V3a2 2 0 0 0-2-2zM5 5H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11v1.5a.5.5 0 0 1-1 0V5H6v1.5a.5.5 0 0 1-1 0V5z"></path>
+</svg>
+    </div>
+
+    <div style="
+    margin-top: -10;
+" onclick="eventsButton()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ddd6d9" class="bi bi-calendar" viewBox="0 0 16 16">
+  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"></path>
+</svg>
+    </div></nav>
+  
+ 
+<div id="rJW07yagCF" class="toasted-container top-center full-width"></div><div id="H1WFyV6eCF" class="toasted-container top-center full-width"></div>
+<div id="ByZ-GfT-At" class="toasted-container top-center full-width"></div>
+<div id="SySOh2SCF" class="toasted-container top-center full-width"></div><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+<script>
+    const notifIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" class="bi bi-bell-fill" viewBox="0 0 16 16">
+      <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z<circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line>"/>
+    </svg>`;
+
+    const pasteIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+      <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+    </svg>`;
+
+    const cutIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="currentColor" stroke-width="0.8" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+      <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+    </svg>`;
+
+    const downloadIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="currentColor" stroke-width="0.8" class="bi bi-phone" viewBox="0 0 16 16">
+      <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+      <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+    </svg>`;
+
+    const deleteIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+      <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+    </svg>`;
+
+    const menuItems = [
+      {
+        content: `${notifIcon}&nbsp;&nbsp;Soleware Fact`,
+        events: {
+          click: (e) => showFact()
+          // mouseover: () => console.log("Copy Button Mouseover")
+          // You can use any event listener from here
+        }
+      },
+      
+      { 
+      content: `${pasteIcon}&nbsp;&nbsp;Check for Event`,
+      events: {
+          click: (e) => eventCheck()
+          // mouseover: () => console.log("Copy Button Mouseover")
+          // You can use any event listener from here
+        }
+      },
+      { content: `${cutIcon}&nbsp;&nbsp;Emulate Gateway`,
+      events: {
+          click: (e) => gatewayExit()
+          // mouseover: () => console.log("Copy Button Mouseover")
+          // You can use any event listener from here
+        }
+      },
+      { content: `${downloadIcon}&nbsp;&nbsp;User Agent`,
+      events: {
+          click: (e) => showAgent()
+          // mouseover: () => console.log("Copy Button Mouseover")
+          // You can use any event listener from here
+        }
+      },
+      {
+        content: `${deleteIcon}&nbsp;&nbsp;Reload Solenet`,
+        events: {
+          click: (e) => restartNet(),
+        },
+        divider: "top" // top, bottom, top-bottom
+      }
+    ];
+
+    const light = new ContextMenu({
+      target: ".RDXTOPBAR",
+      mode: "light", // default: "dark"
+      menuItems
+    });
+
+    light.init();
+
+    const dark = new ContextMenu({
+      target: ".RDXSECTIONHEADER",
+      menuItems
+    });
+
+    dark.init();
+
+    // remove message
+
+    function removeMessage() {
+      const message = document.querySelector(".right-click");
+      if (message) message.remove();
+    }
+
+    window.addEventListener("click", removeMessage);
+    window.addEventListener("contextmenu", removeMessage);
+</script>
+<script>
+   $('.RDXSORTBUTTON').on('click', function() {
+       $('.RDXTOPBAR').toggleClass('clicked');
+   });
+
+   $('.button-34').on('click', function() {
+       $('.RDXTOPBAR').toggleClass('clicked');
+   });
+</script>
+
+
+
+<div id="B1s8wxoRK" class="toasted-container top-center full-width"></div>
+<div id="SyW85Wj0Y" class="toasted-container top-center full-width"></div>
+<div id="rkNq8LoAY" class="toasted-container top-center full-width"></div><div id="B1SXcjiRt" class="toasted-container top-center full-width"></div><div id="BJxG66ol9" class="toasted-container top-center full-width"></div></body></html>

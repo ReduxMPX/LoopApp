@@ -1,4 +1,12 @@
 console.log("Solenet Development V0.9")
+// GETTING CURRENT MONTH FOR HOME PAGE SALE COUNTER
+
+const d = new Date();
+
+const monthName = d.toLocaleString("default", {month: "long"});
+
+console.log("Sales Month: " + monthName);
+
 
 function gatewayExit() {
     window.close()

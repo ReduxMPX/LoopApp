@@ -8,6 +8,10 @@ const monthName = d.toLocaleString("default", {month: "long"});
 console.log("Sales Month: " + monthName);
 
 
+function participantReload () {
+    alert("RELOAD FAILED\nERR: EVENT SERVER NOT LIVE")
+}
+
 function gatewayExit() {
     window.close()
 }

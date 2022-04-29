@@ -35,5 +35,16 @@ function finalSequence() {
     }
 }
 
+function emergencyProtocol() {
+    alert("INITIATION BLOCKED")
+}
+
+function attackStatus() {
+    alert("CYBER ATTACK STATUS:\n INACTIVE")
+}
+
+function accessSite() {
+    window.open("https://www.loopnews.app/Security/Canvas")
+}
 
 

@@ -22,3 +22,15 @@ function accessSequence() {
         window.open("https://www.google.com", "_self")
     }
 }
+
+function finalSequence() {
+    var accessStatus = sessionStorage.getItem("accessGranted");
+
+    if(accessStatus == "Y") {
+        console.log("User authentication is valid")
+    }
+    else {
+        console.error("User authentication is invalid")
+        window.open("https://loopnews.app/Security/ACCESS", "_self")
+    }
+}

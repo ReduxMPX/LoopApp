@@ -3,8 +3,8 @@ function accessSequence() {
 
     if(accessAttempt == "RDXNET22")
     {
-        localStorage.setItem("accessGranted", "Y");
-        var accessStatus = localStorage.getItem("accessGranted");
+        sessionStorage.setItem("accessGranted", "Y");
+        var accessStatus = sessionStorage.getItem("accessGranted");
 
         if(accessStatus == "Y")
         {
@@ -12,7 +12,7 @@ function accessSequence() {
             
             setTimeout(() => {
             window.open("https://www.loopnews.app/Security/CONTROL", "_self")
-            }, "4000")
+            }, "1500")
         }
 
     }

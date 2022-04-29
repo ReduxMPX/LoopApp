@@ -46,8 +46,8 @@ function attackStatus() {
     .then(res => res.json())
     .then((out) => {
         console.log('Status: ', out);
+        alert("CYBER ATTACK STATUS:\n" + out)
         })
-    alert("CYBER ATTACK STATUS:\n" + out)
 }
 
 function accessSite() {

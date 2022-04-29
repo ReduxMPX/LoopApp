@@ -34,3 +34,6 @@ function finalSequence() {
         window.open("https://loopnews.app/Security/ACCESS", "_self")
     }
 }
+
+
+

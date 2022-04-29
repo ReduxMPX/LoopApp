@@ -40,7 +40,14 @@ function emergencyProtocol() {
 }
 
 function attackStatus() {
-    alert("CYBER ATTACK STATUS:\n INACTIVE")
+    let url = 'https://redux-cyber-systems-default-rtdb.firebaseio.com/emergencyShutdown.json';
+
+    fetch(url)
+    .then(res => res.json())
+    .then((out) => {
+        console.log('Status: ', out);
+        })
+    alert("CYBER ATTACK STATUS:\n" + out)
 }
 
 function accessSite() {

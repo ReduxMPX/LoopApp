@@ -37,10 +37,24 @@ function finalSequence() {
 
 function emergencyProtocol() {
     alert("INITIATION BLOCKED")
+    let urlProtocol = 'https://redux-cyber-systems-default-rtdb.firebaseio.com/emergencyProtocol.json';
+
+    fetch(url)
+    .then(res => res.json())
+    .then((out) => {
+        if(out == "false") {
+            // IF EMERGENCY PROTOCOL IS NOT ACTIVE YET...
+            console.log("[BEFORE CHANGE] protocol is inactive")
+        }
+        else {
+            // IF IT IS ALREADY ACTIVE
+            console.log("[BEFORE CHANGE] protocol is active")
+        }
+        })
 }
 
 function attackStatus() {
-    let url = 'https://redux-cyber-systems-default-rtdb.firebaseio.com/emergencyShutdown.json';
+    let url = 'https://redux-cyber-systems-default-rtdb.firebaseio.com/attackStatus.json';
 
     fetch(url)
     .then(res => res.json())

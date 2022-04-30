@@ -37,7 +37,7 @@ function finalSequence() {
 
 function emergencyProtocol() {
     alert("INITIATION BLOCKED")
-    let urlProtocol = 'https://redux-cyber-systems-default-rtdb.firebaseio.com/emergencyProtocol.json';
+    let urlProtocol = 'https://redux-cyber-systems-default-rtdb.firebaseio.com/emergencyShutdown/emergencyShutdown';
 
     fetch(urlProtocol)
     .then(res => res.json())

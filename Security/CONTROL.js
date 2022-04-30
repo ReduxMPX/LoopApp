@@ -44,11 +44,11 @@ function emergencyProtocol() {
     .then((out) => {
         if(out == "false") {
             // IF EMERGENCY PROTOCOL IS NOT ACTIVE YET...
-            console.log("[BEFORE CHANGE] protocol is inactive")
+            console.log("[BEFORE CHANGE] protocol is inactive\n[DEBUG] Return: " + out)
         }
         else {
             // IF IT IS ALREADY ACTIVE
-            console.log("[BEFORE CHANGE] protocol is active")
+            console.log("[BEFORE CHANGE] protocol is active\n[DEBUG] Return: " + out)
         }
         })
 }

@@ -27,7 +27,13 @@ body {
 
 .card {
   border-radius: 25px;
-  box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 12px 0 #171717bd;
+}
+
+.card:hover {
+  box-shadow: 0 0px 12px 0 #00eccdad;
+  border: 1px solid #00eccd;
+  transition: 150ms;
 }
 
 .card-head {

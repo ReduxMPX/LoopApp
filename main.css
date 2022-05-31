@@ -850,3 +850,18 @@ body {
 .button-23-notif.clicked {
   background-color: #66dfab;
 }
+
+
+.toasted.venice {
+  padding: 0 20px;
+  min-height: 38px;
+  font-size: 100%;
+  line-height: 1.1em;
+  border-radius: 30px;
+  color: #fff;
+  background: linear-gradient(85deg,#58bfa2cc,#6ba9e2db);
+  font-weight: 700;
+  box-shadow: 0 12px 44px 0 rgb(10 21 84 / 24%);
+  backdrop-filter: blur(10px);
+}
+

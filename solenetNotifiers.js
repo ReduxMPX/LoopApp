@@ -1,7 +1,7 @@
  let solenetFactNotif = new Toasted({
     position : 'top-center',
     theme : 'venice',
-    duration : '1500000', //TEMPORARY FOR SOLENET NOTIFICATION REDESIGN - CORRECT RELEASE VALUE WAS 1500
+    duration : '1500', //TEMPORARY FOR SOLENET NOTIFICATION REDESIGN - CORRECT RELEASE VALUE WAS 1500
     fullWidth : "true",
 	})	 
 

@@ -556,10 +556,10 @@ body {
 	font-weight: bold;
 }
 
-.RDXSECTIONHEADER{
+.RDXSECTIONHEADER {
+    margin-top: 15px;
     font-size: 12px;
-    font-weight: 800;
-    background: -webkit-linear-gradient(    45deg, #f9c58d, #f492f0 80%);
+    background: -webkit-linear-gradient(45deg, #f9c58d, #f492f0 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -571,7 +571,7 @@ body {
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
-}
+  }
 
 
 

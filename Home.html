@@ -1,8 +1,12 @@
-<html><head><meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
   <title>Home • SOLENET</title>
-  
+
 
   <link rel="stylesheet" href="https://unpkg.com/toastedjs/dist/toasted.min.css">
   <script src="https://unpkg.com/toastedjs/dist/toasted.min.js"></script>
@@ -10,17 +14,17 @@
   <link rel="stylesheet" href="main.css">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
+
   <script src="/solenetNotifiers.js"></script>
   <script src="main.js"></script>
 
 
-	
+
   <!--Solenet uses Google Analytics to offer the best experience to buyers.-->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-54NB51PLB2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-54NB51PLB2');
@@ -29,66 +33,66 @@
   </script>
 
   <script>
-	// var loadStatus = sessionStorage.getItem("solenetLoaded")
-	// if (loadStatus != "Y") {
-	//   window.open("/Solenet","_Self")	
-	// }
-	    
-	let sizeDetail = new Toasted({
-    position : 'top-right',
-    theme : 'venice',
-    icon : 'view_in_ar',
-    duration : '1500',
-    onComplete : () => {
+    // var loadStatus = sessionStorage.getItem("solenetLoaded")
+    // if (loadStatus != "Y") {
+    //   window.open("/Solenet","_Self")	
+    // }
+
+    let sizeDetail = new Toasted({
+      position: 'top-right',
+      theme: 'venice',
+      icon: 'view_in_ar',
+      duration: '1500',
+      onComplete: () => {
         console.log('User received size detail')
-    }
-	})	 
+      }
+    })
 
     let shippingDetail = new Toasted({
-    position : 'top-right',
-    theme : 'venice',
-    icon : 'local_shipping',
-    duration : '1500',
-    onComplete : () => {
+      position: 'top-right',
+      theme: 'venice',
+      icon: 'local_shipping',
+      duration: '1500',
+      onComplete: () => {
         console.log('User received shipping detail')
-    }
-	})	 
+      }
+    })
 
     function storeButton() {
-      window.open("/Shop","_self")
+      window.open("/Shop", "_self")
     }
 
     function eventsButton() {
-      window.open("/Events","_self")
+      window.open("/Events", "_self")
     }
     function arrivalsButton() {
       window.scroll({
-      top: 0, 
-      left: 0, 
-      behavior: 'smooth'
-    });
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
     }
     let currentEvent = new Toasted({
-        position : 'top-center',
-        theme : 'bootstrap',
-        icon : 'sensors',
-        fullWidth : true,
-        duration : '10000',
-        action : {
-            text : 'VIEW',
-            onclick : 'enterEvent()', 
-            onClick : (e, toasted) => {
-            enterEvent()
+      position: 'top-center',
+      theme: 'bootstrap',
+      icon: 'sensors',
+      fullWidth: true,
+      duration: '10000',
+      action: {
+        text: 'VIEW',
+        onclick: 'enterEvent()',
+        onClick: (e, toasted) => {
+          enterEvent()
         }
-        },
-        onComplete : () => {
-            console.log('User received event notification')
-            }
-      })
-      function enterEvent() {
-          console.log("RDX ANALYTICAL: User from site went to event")
-          window.open("/Events", "_Self")
+      },
+      onComplete: () => {
+        console.log('User received event notification')
       }
+    })
+    function enterEvent() {
+      console.log("RDX ANALYTICAL: User from site went to event")
+      window.open("/Events", "_Self")
+    }
 
 	// CHECKS WHETHER SOLENET HAS A LIVE EVENT ATM
 
@@ -97,10 +101,12 @@
 
 
   </script>
-	
-	
+
+
 </head>
-  <body onload="homeLoad()" data-new-gr-c-s-check-loaded="14.1047.0" data-gr-ext-installed=""><div class="RDXTOPBAR">
+
+<body onload="homeLoad()" data-new-gr-c-s-check-loaded="14.1047.0" data-gr-ext-installed="">
+  <div class="RDXTOPBAR">
     <img src="SOLEWARE Assets\Logos\COMPACT_TOPBARWIDESOLENET.png" style="
     height: 80;
     width: 160;
@@ -109,7 +115,7 @@
     margin-top: 115px;
     position: static;
     " onclick="arrivalsButton()">
-<div></div>
+    <div></div>
 
     <h1 id="solenetSaleCountDisplay" class="RDXSALENUM" style="
     margin-top: -57;
@@ -120,7 +126,7 @@
     float: right;
     margin-right: 35px;
 ">ERR</h1>
-<h1 class="RDXSALECAPTION" style="
+    <h1 class="RDXSALECAPTION" style="
     margin-top: -35;
     bottom: 60px;
     left: 0px;
@@ -129,235 +135,243 @@
     margin-right: 10px;
     float: right;
 ">JANUARY SALES</h1>
-<script>
-	// FETCHES THE SOLENET SALE COUNT FROM PUBLIC DATABASE
+    <script>
+      // FETCHES THE SOLENET SALE COUNT FROM PUBLIC DATABASE
 
-	var url = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetSales/solenetSales.json";
+      var url = "https://solenet-12bb4-default-rtdb.firebaseio.com/solenetSales/solenetSales.json";
 
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", url);
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url);
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-        solenetSaleCounterData = xhr.responseText;
-        document.getElementById("solenetSaleCountDisplay").innerHTML = solenetSaleCounterData;
-        console.log("Sale Data Received: " + xhr.status + "-S : " + xhr.responseText + "-D");
-    }};
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          solenetSaleCounterData = xhr.responseText;
+          document.getElementById("solenetSaleCountDisplay").innerHTML = solenetSaleCounterData;
+          console.log("Sale Data Received: " + xhr.status + "-S : " + xhr.responseText + "-D");
+        }
+      };
 
-  xhr.send();
-</script>
-</div>
-</div>
+      xhr.send();
+    </script>
+  </div>
+  </div>
   <div class="RDXSECTIONHEADER" style="
     top: 70px;
 ">
     LATEST ARRIVALS
   </div>
-      <div class="container">
-          <div class="card" style="
+  <div class="container">
+    <div class="card" style="
     margin-top: 75px;
 ">
-		  
-	    <script>
+
+      <script>
         function sizeDetailRequestLAP1() {
           sizeDetail.show("This pair is sold in size US 9 for males")
         }
-              
+
         function shippingDetailRequestLAP1() {
           shippingDetail.show("This fee is charged to cover shipping")
         }
-		    
-	    </script>
-            <div class="card-head">
-              <img src="\SOLEWARE Assets\YEEZY LOGO WT.png" alt="logo" class="card-logo">
-              <img src="\SOLEWARE Assets\YEEZY_ZEBRA_PNG.png" alt="YZY ZEBRA 350" class="product-img">
-              <div class="product-detail">
-                <h2>YEEZY 350 V2 "Zebra"</h2>These Yeezy's are nicknamed the "Zebras," and come in a classic white, black and red color scheme. Sporting a white-based Primeknit upper with black accents giving off a Zebra stripe vibe, “SPLY-350” displayed across the sides in red finished off by a translucent cushioned sole. </div>
-              <span class="back-text">
-                      YZY
-                    </span>
+
+      </script>
+      <div class="card-head">
+        <img src="\SOLEWARE Assets\YEEZY LOGO WT.png" alt="logo" class="card-logo">
+        <img src="\SOLEWARE Assets\YEEZY_ZEBRA_PNG.png" alt="YZY ZEBRA 350" class="product-img">
+        <div class="product-detail">
+          <h2>YEEZY 350 V2 "Zebra"</h2>These Yeezy's are nicknamed the "Zebras," and come in a classic white, black and
+          red color scheme. Sporting a white-based Primeknit upper with black accents giving off a Zebra stripe vibe,
+          “SPLY-350” displayed across the sides in red finished off by a translucent cushioned sole.
+        </div>
+        <span class="back-text">
+          YZY
+        </span>
+      </div>
+      <div style="height: 225;" class="card-body">
+        <div class="product-desc">
+          <span class="product-title">
+            YEEZY 350 V2 <b>"Zebra"</b>
+            <span class="badge">
+              USED
+            </span>
+          </span>
+          <span class="product-caption">
+            Used • Tap to view condition
+          </span>
+          <span class="product-rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star grey"></i>
+          </span>
+        </div>
+        <div class="product-properties">
+          <span class="product-size">
+
+            <div>
+
+              <h4 style=" margin-top: 5px; padding-bottom: 5px;">Size</h4>
+              
+              <ul class="ul-size">
+                <li>
+                  <a onclick="sizeDetailRequest()" class="active" style="width: 55px; margin-left: 5px; font-weight: 900;">10 Male</a>
+                </li>
+              </ul>
             </div>
-            <div style="height: 225;" class="card-body">
-              <div class="product-desc">
-                <span class="product-title">
-                        YEEZY 350 V2 <b>"Zebra"</b>
-                        <span class="badge">
-                          USED
-                        </span>
-                </span>
-                <span class="product-caption">
-                        Used • Tap to view condition
-                      </span>
-                <span class="product-rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star grey"></i>
-                      </span>
-              </div>
-              <div class="product-properties">
-                <span class="product-size">
-                        
-                  <div>
+            <div>
 
-<h4 style="
-margin-top: 5px;
-padding-bottom: 5px;
-">Size</h4>
+              <h4 style="margin-top: -20px; margin-left: 90px;padding-bottom: 5px;">Shipping</h4>
 
-<ul class="ul-size">
-                    <li></li>
-                    
-                    
-                    <li>
-<a onclick="sizeDetailRequest()" class="active" style="width: 55px;
-margin-left: 5px;
-font-weight: 900;">10 Male</a></li>
-                    <li></li>
-                  </ul>
-                  </div>
-                <div>
-
-<h4 style="
-margin-top: -20px;
-margin-left: 90px;padding-bottom: 5px;
-">Shipping</h4>
-
-<ul class="ul-size">
-                    <li></li>
-                    
-                    
-                    <li>
-<a style="
-margin-left: 15px;
-font-weight: 900;
-" class="active" onclick="shippingDetailRequestLAP2()">$9.50</a></li>
-                    <li></li>
-                  </ul>
-</div>
-</span>
-
-
-                <span class="product-color">
-                        <h4>HAS BOX</h4>
-                        <img style="height: 20;width: 20;margin-left: 35px;" src="https://freeiconshop.com/wp-content/uploads/edd/checkmark-flat.png">
-                      </span>
-                <span class="product-price" style="
-  margin-left: 50px; font-weight: 450;
-">
-                        H/O<b>$85.00</b>
-                      </span>
-              </div>
+              <ul class="ul-size">
+                <li>
+                  <a style="margin-left: 15px; font-weight: 900;" class="active" onclick="shippingDetailRequestLAP2()">$9.50</a>
+                </li>
+              </ul>
             </div>
-          </div>
-        <div class="card" style="
+          </span>
+
+
+          <span class="product-color">
+            <h4>HAS BOX</h4>
+            <img style="height: 20;width: 20;margin-left: 35px;"
+              src="https://freeiconshop.com/wp-content/uploads/edd/checkmark-flat.png">
+          </span>
+          <span class="product-price" style="margin-left: 50px; font-weight: 450;">
+            H/O<b>$85.00</b>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="
     margin-top: 35px;
 ">
-<script>
-		function sizeDetailRequestLAP2() {
-			sizeDetail.show("This pair is sold in size US 10 for males")
-		 }
-		    	
-		 function shippingDetailRequestLAP2() {
-			shippingDetail.show("This fee is charged to cover shipping")
-		 }
-		    
-	    </script>
-            <div class="card-head">
-              <img src="\SOLEWARE Assets\AJ LOGO WT.png" alt="logo" class="card-logo">
-              <img src="\SOLEWARE Assets\JORDAN_UNVSBLUE_PNG.png" alt="YZY ZEBRA 350" class="product-img">
-              <div class="product-detail">
-                <h2>Air Jordan 1 Retro</h2>Firstly arrived in 1985, Air Jordan 1 has been around for over 3 decades. The Jordan line keeps revamping the OG silhouettes with fresh colours and premium materials, and has also collaborated with different artists, designers and retailers to capture the essence of the original through a modern lens.</div>
-              <span class="back-text">
-                      AIR
-                    </span>
-            </div>
-            <div class="card-body">
-              <div class="product-desc">
-                <span class="product-title">
-                        
-Air Jordan 1 Retro High OG <b>"UNIVERSITY BLUE"</b>
-                        <span style="background: #11e95b;margin-left: 0px;top: 3px;" class="badge">
-                          DEADSTOCK
-                        </span>
-                </span>
-                <span class="product-caption" style="
+      <script>
+        function sizeDetailRequestLAP2() {
+          sizeDetail.show("This pair is sold in size US 10 for males")
+        }
+
+        function shippingDetailRequestLAP2() {
+          shippingDetail.show("This fee is charged to cover shipping")
+        }
+
+      </script>
+      <div class="card-head">
+        <img src="\SOLEWARE Assets\AJ LOGO WT.png" alt="logo" class="card-logo">
+        <img src="\SOLEWARE Assets\JORDAN_UNVSBLUE_PNG.png" alt="YZY ZEBRA 350" class="product-img">
+        <div class="product-detail">
+          <h2>Air Jordan 1 Retro</h2>Firstly arrived in 1985, Air Jordan 1 has been around for over 3 decades. The
+          Jordan line keeps revamping the OG silhouettes with fresh colours and premium materials, and has also
+          collaborated with different artists, designers and retailers to capture the essence of the original through a
+          modern lens.
+        </div>
+        <span class="back-text">
+          AIR
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="product-desc">
+          <span class="product-title">
+
+            Air Jordan 1 Retro High OG <b>"UNIVERSITY BLUE"</b>
+            <span style="background: #11e95b;margin-left: 0px;top: 3px;" class="badge">
+              DEADSTOCK
+            </span>
+          </span>
+          <span class="product-caption" style="
     margin-top: 4px;
 ">
-                        DEADSTOCK • Tap to view condition
-                      </span>
-                <span class="product-rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star grey"></i>
-                      </span>
-              </div>
-              <div class="product-properties">
-                <span class="product-size">
-                        <h4 style="
+            DEADSTOCK • Tap to view condition
+          </span>
+          <span class="product-rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star grey"></i>
+          </span>
+        </div>
+        <div class="product-properties">
+          <span class="product-size">
+            <h4 style="
     margin-top: 5px;
     padding-bottom: 5px;
 ">Size⠀⠀⠀⠀⠀⠀Shipping</h4>
-                        <ul class="ul-size">
-                          <li></li>
-                          
-                          <li></li>
-                          <li>
-<a onclick="sizeDetailRequest()" class="active" style="width: 55px;
+            <ul class="ul-size">
+              <li></li>
+
+              <li></li>
+              <li>
+                <a onclick="sizeDetailRequest()" class="active" style="width: 55px;
   margin-left: 5px;
 font-weight: 900;">10 Male</a><a style="
   margin-left: 15px;
   font-weight: 900;
-  " class="active" onclick="shippingDetailRequestLAP2()">$9.50</a></li>
-                          <li></li>
-                        </ul>
-                      </span>
-                <span class="product-color">
-                        <h4>HAS BOX</h4>
-                        <img style="height: 20;width: 20;margin-left: 35px;" src="https://freeiconshop.com/wp-content/uploads/edd/checkmark-flat.png">
-                      </span>
-                <span class="product-price" style="
+  " class="active" onclick="shippingDetailRequestLAP2()">$9.50</a>
+              </li>
+              <li></li>
+            </ul>
+          </span>
+          <span class="product-color">
+            <h4>HAS BOX</h4>
+            <img style="height: 20;width: 20;margin-left: 35px;"
+              src="https://freeiconshop.com/wp-content/uploads/edd/checkmark-flat.png">
+          </span>
+          <span class="product-price" style="
   margin-left: 85px;
   font-weight: 450;
 ">
-                        <b>$410.00</b>
-                      </span>
-              </div>
-            </div>
-          </div></div>
-        
-        
-        
-        
-        
-  
+            <b>$410.00</b>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
   <nav class="menu" style="z-index: 999;  left: 50%;
   position: fixed; bottom: -1px;
   transform: translate(-50%, -0%);
   margin: 0 auto;">
-	<div style="
+    <div style="
     margin-top: -10;
 " onclick="arrivalsButton()">
-		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#6979ff" class="bi bi-bell-fill" viewBox="0 0 16 16" alt="Icon">
-  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"></path> </svg> 
-	</div>
-	<div class="RDXTEMP1" style="
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#6979ff" class="bi bi-bell-fill"
+        viewBox="0 0 16 16" alt="Icon">
+        <path
+          d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z">
+        </path>
+      </svg>
+    </div>
+    <div class="RDXTEMP1" style="
     margin-top: -10;
 " onclick="storeButton()">
-		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi bi-handbag-fill" viewBox="0 0 16 16" fill="#ddd6d9">
-  <path d="M8 1a2 2 0 0 0-2 2v2H5V3a3 3 0 1 1 6 0v2h-1V3a2 2 0 0 0-2-2zM5 5H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11v1.5a.5.5 0 0 1-1 0V5H6v1.5a.5.5 0 0 1-1 0V5z"></path>
-</svg>
-	</div>
-	<div style="
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi bi-handbag-fill" viewBox="0 0 16 16"
+        fill="#ddd6d9">
+        <path
+          d="M8 1a2 2 0 0 0-2 2v2H5V3a3 3 0 1 1 6 0v2h-1V3a2 2 0 0 0-2-2zM5 5H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11v1.5a.5.5 0 0 1-1 0V5H6v1.5a.5.5 0 0 1-1 0V5z">
+        </path>
+      </svg>
+    </div>
+    <div style="
     margin-top: -10;
 " onclick="eventsButton()">
-		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ddd6d9" class="bi bi-calendar" viewBox="0 0 16 16">
-  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"></path>
-</svg>
-	</div></nav>
- 
-<div id="rJW07yagCF" class="toasted-container top-center full-width"></div><div id="H1WFyV6eCF" class="toasted-container top-center full-width"></div>
-<div id="ByZ-GfT-At" class="toasted-container top-center full-width"></div></body></html>
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ddd6d9" class="bi bi-calendar"
+        viewBox="0 0 16 16">
+        <path
+          d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z">
+        </path>
+      </svg>
+    </div>
+  </nav>
+
+  <div id="rJW07yagCF" class="toasted-container top-center full-width"></div>
+  <div id="H1WFyV6eCF" class="toasted-container top-center full-width"></div>
+  <div id="ByZ-GfT-At" class="toasted-container top-center full-width"></div>
+</body>
+
+</html>

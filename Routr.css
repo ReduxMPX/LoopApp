@@ -183,7 +183,7 @@
     right: 0;
     bottom: 0;
     margin: 0 10px 10px 0;
-    float: right;    
+    float: right;
     background: #FFF;
     width: 29px;
     height: 29px;
@@ -210,6 +210,9 @@
 .routrMenuButton.clicked {
     width: 400px;
     height: 200px;
+    background: rgba(0, 0, 0, 0.31) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
     transition: 150ms;
 }
 

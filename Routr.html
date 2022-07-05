@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="Routr.css">
     <script src="Routr.js"></script>
 
@@ -32,8 +34,8 @@
 <body>
     <img src="RoutrTempWatermark.png"
         style="position: absolute; z-index: 99999999; width: 40px; left: 0px; bottom: 0px; padding: 10px;">
-    <div class="routrMenuButton">
-        <i class="bi bi-grid-fill" style="color: #FFF; position:relative; top:50%; left:50%; transform:translate(-50%,-72%);"></i>
+    <div class="routrMenuButton" id="routrMenu">
+        <i class="bi bi-grid-fill" id="menuButtonIcon" style="color: #FFF; position:relative; top:50%; left:50%; transform:translate(-50%,-72%);"></i>
     </div>
     <div id='map'
         style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;'>
@@ -122,6 +124,15 @@
 
                 .addTo(map);
         }
+
+    </script>
+
+    <script>
+        $('#routrMenu').on('click', function () {
+            console.log("asd");
+            $('#routrMenu').toggleClass('clicked');
+        });
+
 
     </script>
 </body>

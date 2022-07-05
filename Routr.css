@@ -204,4 +204,15 @@
     text-align: center !important;
 
     z-index: 99999999;
+    transition: 150ms;
+}
+
+.routrMenuButton.clicked {
+    width: 400px;
+    height: 200px;
+    transition: 150ms;
+}
+
+.routrMenuButton.clicked #menuButtonIcon {
+    display: none !important;
 }

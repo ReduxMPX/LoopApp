@@ -30,7 +30,7 @@
 }
 
 .carmarker {
-    background-image: url('parkIcon.svg');
+    background-image: url('ParkedCar.png');
     background-size: cover;
     width: 20px;
     height: 20px;

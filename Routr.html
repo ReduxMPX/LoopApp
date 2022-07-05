@@ -9,8 +9,17 @@
     <link rel="stylesheet" type="text/css" href="Routr.css">
     <script src="Routr.js"></script>
 
+    <!-- Mapbox Core -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Routr Geocoder -->
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+        type="text/css">
+
 
     <script
         src="https://cdn.jsdelivr.net/npm/mapbox-gl-animated-popup@v0.3.0/dist/mapbox-gl-animated-popup.min.js"></script>
@@ -30,11 +39,20 @@
             style: 'mapbox://styles/alekmap/cl562z27v007w15qxxwa1zoj3', // style URL
             center: [-118.46867274389726, 34.07552996200769], // starting position [lng, lat]
             zoom: 9, // starting zoom
+            maxPitch: 40,
             projection: 'globe' // display the map as a 3D globe
         });
         map.on('style.load', () => {
             map.setFog({}); // Set the default atmosphere style
         });
+
+        map.addControl(
+            new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl
+            })
+        );
+        
         const nav = new mapboxgl.NavigationControl();
         map.addControl(nav, 'top-right');
 
@@ -49,7 +67,7 @@
                     },
                     properties: {
                         title: 'Parked Car',
-                        description: '1001 Kenfield Avenue\nLos Angeles, CA\n90049'
+                        description: 'Your car is parked at this location'
                     }
                 }
             ]
@@ -63,11 +81,9 @@
             // make a marker for each feature and add to the map
             new mapboxgl.Marker(el)
                 .setLngLat(feature.geometry.coordinates)
-            new mapboxgl.Marker(el)
-                .setLngLat(feature.geometry.coordinates)
                 .setPopup(
                     new AnimatedPopup({
-                        offset: 25, 
+                        offset: 25,
                         openingAnimation: {
                             duration: 1000,
                             easing: 'easeOutElastic',
@@ -76,7 +92,7 @@
                         closingAnimation: {
                             duration: 300,
                             easing: 'easeInBack',
-                            transform: 'scale'
+                            transform: 'scfale'
                         }
                     }) // add popups
                         .setHTML(

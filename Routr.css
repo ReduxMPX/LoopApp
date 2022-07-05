@@ -177,3 +177,31 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.routrMenuButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 10px 10px 0;
+    float: right;    
+    background: #FFF;
+    width: 29px;
+    height: 29px;
+    display: block;
+    padding: 0;
+    outline: none;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px !important;
+    background: rgba(0, 0, 0, 0.18) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center !important;
+
+    z-index: 99999999;
+}

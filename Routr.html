@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <link rel="stylesheet" type="text/css" href="Routr.css">
     <script src="Routr.js"></script>
@@ -41,7 +41,7 @@
             center: [-118.46867274389726, 34.07552996200769], // starting position [lng, lat]
             zoom: 9, // starting zoom
             minZoom: 2,
-            maxPitch: 40,
+            maxPitch: 60,
             projection: 'globe' // display the map as a 3D globe
         });
         map.on('style.load', () => {
@@ -58,16 +58,18 @@
         const nav = new mapboxgl.NavigationControl();
         map.addControl(nav, 'top-right');
         map.addControl(
-        new mapboxgl.GeolocateControl({
-        positionOptions: {
-        enableHighAccuracy: true
-        },
-        // When active the map will receive updates to the device's location as it changes.
-        trackUserLocation: true,
-        // Draw an arrow next to the location dot to indicate which direction the device is heading.
-        showUserHeading: true
-        })
+            new mapboxgl.GeolocateControl({
+                positionOptions: {
+                    enableHighAccuracy: true
+                },
+                // When active the map will receive updates to the device's location as it changes.
+                trackUserLocation: true,
+                // Draw an arrow next to the location dot to indicate which direction the device is heading.
+                showUserHeading: true
+            })
         );
+
+
         const geojson = {
             type: 'FeatureCollection',
             features: [
@@ -111,6 +113,7 @@
                             `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
                         )
                 )
+
                 .addTo(map);
         }
 

@@ -203,6 +203,7 @@
     align-items: center;
     text-align: center !important;
     user-select: none !important;
+    -webkit-user-select: none !important;
     z-index: 99999999;
     transition: 150ms;
 }
@@ -218,6 +219,7 @@
     align-items: center;
     justify-content: center;
     user-select: none !important;
+    -webkit-user-select: none !important;
     margin: 0 8px 10px 0;
     transition: 150ms;
 }
@@ -229,11 +231,13 @@
 .routrMenuContainer {
     display: none;
     user-select: none !important;
+    -webkit-user-select: none;
 }
 
 .routrMenuButton.clicked .routrMenuContainer {
     display: contents;
     user-select: none !important;
+    -webkit-user-select: none;
 }
 
 
@@ -252,6 +256,7 @@
     cursor: pointer;
     outline: none;
     user-select: none;
+    -webkit-user-select: none;
     position: absolute;
     top: 40px;
   }

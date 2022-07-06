@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="refresh" content="4; url = https://www.loopnews.app/Routr" />
+    <title>Loading Routr</title>
+</head>
+
+<style>
+   /* From uiverse.io by @mrhyddenn */
+.progress-loader {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.progress-loader {
+  width: 150px;
+  background: rgba(236, 236, 238, 0.253);
+  height: 3px;
+  border-radius: 7px;
+}
+
+.progress {
+  content: '';
+  width: 1px;
+  height: 3px;
+  border-radius: 7px;
+  background: linear-gradient(to right, #f2709c, #ff9472); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transition: 0.5s;
+  animation: loading1274 3s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loading1274 {
+  0% {
+    width: 0%;
+  }
+
+  10% {
+    width: 10%;
+  }
+
+  50% {
+    width: 40%;
+  }
+
+  60% {
+    width: 60%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+</style>
+
+<body style="background-color: #212121;">
+    <img src="RoutrSQPrim.png" style="
+    height: 170px;
+    display: block;
+    margin: auto;
+    margin-top: 270px;
+">
+    <div class="progress-loader">
+        <div class="progress"></div>
+    </div>
+
+<script>
+     sessionStorage.setItem("routrLoaded", "Y");
+</script>
+</body>
+
+</html>

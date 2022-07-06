@@ -202,7 +202,7 @@
     display: flex;
     align-items: center;
     text-align: center !important;
-
+    user-select: none !important;
     z-index: 99999999;
     transition: 150ms;
 }
@@ -213,9 +213,65 @@
     background: rgba(0, 0, 0, 0.31) !important;
     backdrop-filter: blur(15px) !important;
     -webkit-backdrop-filter: blur(15px) !important;
+    border-radius: 10px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none !important;
     transition: 150ms;
 }
 
 .routrMenuButton.clicked #menuButtonIcon {
     display: none !important;
 }
+
+.routrMenuContainer {
+    display: none;
+    user-select: none !important;
+}
+
+.routrMenuButton.clicked .routrMenuContainer {
+    display: contents;
+    user-select: none !important;
+}
+
+
+.routrParkButton {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    position: absolute;
+    top: 40px;
+  }
+  
+  .routrParkButton:hover {
+    background-color: #6ad5ff;
+    box-shadow: 0px 0px 20px #6ad5ffb1;
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .routrParkButton:active {
+    transform: translateY(-1px);
+  }
+
+  .routrContainerTitle {
+    color: rgba(255, 255, 255, 0.658);
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: absolute;
+    top: 2px;
+  }

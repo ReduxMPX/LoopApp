@@ -16,16 +16,17 @@
     <!-- Mapbox Core -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
-    
+
     <!-- Routr Geocoder -->
     <script
         src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
     <link rel="stylesheet"
         href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
         type="text/css">
-   
 
-    <script src="https://cdn.jsdelivr.net/npm/mapbox-gl-animated-popup@v0.3.0/dist/mapbox-gl-animated-popup.min.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/mapbox-gl-animated-popup@v0.3.0/dist/mapbox-gl-animated-popup.min.js"></script>
 
     <title>Routr</title>
 </head>
@@ -34,11 +35,12 @@
     <img src="RoutrTempWatermark.png"
         style="position: absolute; z-index: 99999999; width: 40px; left: 0px; bottom: 0px; padding: 10px;">
     <div class="routrMenuButton" id="routrMenu">
-        <i class="bi bi-grid-fill" id="menuButtonIcon" style="color: #FFF; position:relative; top:50%; left:50%; transform:translate(-50%,-72%);"></i>
+        <i class="bi bi-grid-fill" id="menuButtonIcon"
+            style="color: #FFF; position:relative; top:50%; left:50%; transform:translate(-50%,-72%);"></i>
         <div class="routrMenuContainer">
             <p class="routrContainerTitle">Routr Options</p>
-            <button class="routrParkButton" style="left: 10px; width: 185px;"> Park Car </button>
-            <button class="routrParkButton" style="right: 10px; width: 185px;"> Show Car </button>
+            <button class="routrParkButton" id="parkCar" style="left: 10px; width: 185px;"> Park Car </button>
+            <button class="routrParkButton" id="showCar" style="right: 10px; width: 185px;"> Show Car </button>
         </div>
     </div>
     <div id='map'
@@ -126,6 +128,22 @@
                 )
 
                 .addTo(map);
+
+            var parkCarButton = document.getElementById("parkCar");
+            parkCarButton.onclick = function (event) {
+                alert("Your browser does not support geolocation yet")
+                console.log("?")
+            }
+
+            var showCarButton = document.getElementById("showCar");
+            showCarButton.onclick = function (event) {
+                $('#routrMenu').toggleClass('clicked');
+                map.flyTo({
+                center: [-118.4835772201756, 34.07780998595211],
+                zoom: 18,
+                essential: true // this animation is considered essential with respect to prefers-reduced-motion
+                });
+            }
         }
 
     </script>
@@ -136,10 +154,13 @@
             $('#routrMenu').toggleClass('clicked');
         });
 
-        $('.routrMenuContainer').click( function() {
+        $('.routrMenuContainer').click(function () {
             $(this).prop('disabled', true);
             return false;
         });
+
+
+
 
     </script>
 </body>

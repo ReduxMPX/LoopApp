@@ -41,6 +41,9 @@
             <p class="routrContainerTitle">Routr Options</p>
             <button class="routrParkButton" id="parkCar" style="left: 10px; width: 185px;"> Park Car </button>
             <button class="routrParkButton" id="showCar" style="right: 10px; width: 185px;"> Show Car </button>
+            <p class="routrContainerTitle" style="top: 100px;">Routr Navigation</p>
+            <input type="text" placeholder="From" class="routrNavigationInputBox" spellcheck="false" style="top: 130px;">
+            <input type="text" placeholder="To" class="routrNavigationInputBox" spellcheck="false" style="top: 176px;">
         </div>
     </div>
     <div id='map'
@@ -50,7 +53,7 @@
 
         var loadStatus = sessionStorage.getItem("routrLoaded")
         if (loadStatus != "Y") {
-          window.open("/RoutrLoading", "_Self")
+          // window.open("/RoutrLoading", "_Self")
         }
 
         mapboxgl.accessToken = 'pk.eyJ1IjoiYWxla21hcCIsImEiOiJjbDU2MWlnY3kxYzR1M2VzMDViOXoyMXB2In0.XORQ_hEGB0kQEVj5ia_z_A';

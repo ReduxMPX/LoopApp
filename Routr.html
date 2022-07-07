@@ -48,9 +48,9 @@
     </div>
     <script>
 
-         var loadStatus = sessionStorage.getItem("routrLoaded")
+        var loadStatus = sessionStorage.getItem("routrLoaded")
         if (loadStatus != "Y") {
-            window.open("/RoutrLoading","_Self")	
+            window.open("/RoutrLoading", "_Self")
         }
 
         mapboxgl.accessToken = 'pk.eyJ1IjoiYWxla21hcCIsImEiOiJjbDU2MWlnY3kxYzR1M2VzMDViOXoyMXB2In0.XORQ_hEGB0kQEVj5ia_z_A';
@@ -112,7 +112,7 @@
             el.className = 'carmarker';
 
             // make a marker for each feature and add to the map
-            new mapboxgl.Marker(el)
+            var parkMarker = new mapboxgl.Marker(el)
                 .setLngLat(feature.geometry.coordinates)
                 .setPopup(
                     new AnimatedPopup({
@@ -127,7 +127,8 @@
                             easing: 'easeInBack',
                             transform: 'scfale'
                         }
-                    }) // add popups
+                    }) 
+                    // add popups
                         .setHTML(
                             `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
                         )
@@ -135,19 +136,33 @@
 
                 .addTo(map);
 
+                function changeParkingLocation(newLong, newLat)
+                {
+                    console.log("Parking marker location changed to: " + newLocation)
+                    parkMarker.setLngLat([newLong, newLat]);
+                    // PROPER SYNTAX: parkMarker.setLngLat([-93.50, 30]);
+                }
+                    
+
+
             var parkCarButton = document.getElementById("parkCar");
             parkCarButton.onclick = function (event) {
-                alert("Your browser does not support geolocation yet")
-                console.log("?")
+                // alert("Your browser does not support geolocation yet")
+                // console.log("?")
+                navigator.geolocation.getCurrentPosition(function(position) {
+                var newParkLat = position.coords.latitude;
+                var newParkLong = position.coords.longitude;
+                changeParkingLocation(newParkLong, newParkLat)
+            })
             }
 
             var showCarButton = document.getElementById("showCar");
             showCarButton.onclick = function (event) {
                 $('#routrMenu').toggleClass('clicked');
                 map.flyTo({
-                center: [-118.4835772201756, 34.07780998595211],
-                zoom: 18,
-                essential: true // this animation is considered essential with respect to prefers-reduced-motion
+                    center: [[-118.4835772201756, 34.07780998595211]],
+                    zoom: 18,
+                    essential: true // this animation is considered essential with respect to prefers-reduced-motion
                 });
             }
         }

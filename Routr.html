@@ -160,7 +160,8 @@
             showCarButton.onclick = function (event) {
                 $('#routrMenu').toggleClass('clicked');
                 map.flyTo({
-                    center: [[-118.4835772201756, 34.07780998595211]],
+                    center: parkMarker.features[0].geometry.coordinates,
+                    // center: [[-118.4835772201756, 34.07780998595211]],
                     zoom: 18,
                     essential: true // this animation is considered essential with respect to prefers-reduced-motion
                 });

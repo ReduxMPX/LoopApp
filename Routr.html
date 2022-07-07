@@ -50,7 +50,7 @@
 
         var loadStatus = sessionStorage.getItem("routrLoaded")
         if (loadStatus != "Y") {
-          //  window.open("/RoutrLoading", "_Self")
+          // window.open("/RoutrLoading", "_Self")
         }
 
         mapboxgl.accessToken = 'pk.eyJ1IjoiYWxla21hcCIsImEiOiJjbDU2MWlnY3kxYzR1M2VzMDViOXoyMXB2In0.XORQ_hEGB0kQEVj5ia_z_A';
@@ -153,8 +153,12 @@
                 var newParkLat = position.coords.latitude;
                 var newParkLong = position.coords.longitude;
                 changeParkingLocation(newParkLong, newParkLat)
+                window.localStorage.setItem('localStoredParkingLocationLong', newParkLong);
+                window.localStorage.setItem('localStoredParkingLocationLat', newParkLat);
             })
             }
+
+
 
             var showCarButton = document.getElementById("showCar");
             showCarButton.onclick = function (event) {
@@ -166,6 +170,14 @@
                     essential: true // this animation is considered essential with respect to prefers-reduced-motion
                 });
             }
+        }
+
+        if(window.localStorage.getItem('localStoredParkingLocationLat') != null) {
+            console.log("Routr detected saved parking spot")
+            changeParkingLocation(window.localStorage.getItem('localStoredParkingLocationLong'), window.localStorage.getItem('localStoredParkingLocationLat'))
+        }
+        else {
+            console.log("no saved parking spot")
         }
 
     </script>

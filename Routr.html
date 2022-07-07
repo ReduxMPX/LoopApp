@@ -50,7 +50,7 @@
 
         var loadStatus = sessionStorage.getItem("routrLoaded")
         if (loadStatus != "Y") {
-            window.open("/RoutrLoading", "_Self")
+          //  window.open("/RoutrLoading", "_Self")
         }
 
         mapboxgl.accessToken = 'pk.eyJ1IjoiYWxla21hcCIsImEiOiJjbDU2MWlnY3kxYzR1M2VzMDViOXoyMXB2In0.XORQ_hEGB0kQEVj5ia_z_A';
@@ -160,7 +160,7 @@
             showCarButton.onclick = function (event) {
                 $('#routrMenu').toggleClass('clicked');
                 map.flyTo({
-                    center: parkMarker.features[0].geometry.coordinates,
+                    center: parkMarker.getLngLat(),
                     // center: [[-118.4835772201756, 34.07780998595211]],
                     zoom: 18,
                     essential: true // this animation is considered essential with respect to prefers-reduced-motion

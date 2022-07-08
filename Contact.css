@@ -8,8 +8,8 @@
 }
 
 .contactCard {
-    background: #1a1a1ab3;
-    border: 1px solid #393939;
+    background: rgba( 0, 0, 0, 0.3 );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 10px;
     width: 360px;
     height: 80px;

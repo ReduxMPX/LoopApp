@@ -1,0 +1,16 @@
+.cardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    padding-top: 30px;
+}
+
+.contactCard {
+    background: #1a1a1ab3;
+    border: 1px solid #393939;
+    border-radius: 10px;
+    width: 360px;
+    height: 80px;
+}

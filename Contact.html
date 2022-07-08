@@ -10,7 +10,7 @@
     <script src="Contact.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <title>ContactHi</title>
@@ -27,7 +27,8 @@
 <body style="background: #353535;">
     <div class="cardContainer">
         <div class="contactCard">
-            <img class="contactCardPFP" src="https://i0.wp.com/superniceclub.com/wp-content/uploads/2021/10/199153914_193170932707472_4821303307310508034_n.jpg?resize=400%2C500&ssl=1">
+            <img class="contactCardPFP"
+                src="https://i0.wp.com/superniceclub.com/wp-content/uploads/2021/10/199153914_193170932707472_4821303307310508034_n.jpg?resize=400%2C500&ssl=1">
             <p class="contactCardName">Tod Brilliant</p>
             <div class="quickActionContainer">
                 <div class="contactCardQuickAction" style="" onclick="messageContact()">
@@ -41,13 +42,28 @@
 
                 </div>
             </div>
+
+            <div class="expandedContainer">
+                <div class="expandedContainerBox">(650) 313-8900</div>
+                <div class="expandedContainerBox" style="left: 136px; width: 150px;">tod@superniceclub.com</div>
+            </div>
         </div>
     </div>
 
     <script>
-            $(".contactCard").on('click', function(event){
+        $(".contactCard").on('click', function (event) {
             console.log("asd");
             $('.contactCard').toggleClass('clicked');
+        });
+
+        $('.quickActionContainer').click(function () {
+            $(this).prop('disabled', true);
+            return false;
+        });
+
+        $('.expandedContainer').click(function () {
+            $(this).prop('disabled', true);
+            return false;
         });
     </script>
 </body>

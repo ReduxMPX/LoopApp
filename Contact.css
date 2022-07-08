@@ -1,4 +1,5 @@
 .cardContainer {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,8 +11,8 @@
 .contactCard {
     background: rgba(0, 0, 0, 0.3);
     display: flex;
-    align-items: center;
-    justify-content: right;
+    /* align-items: center;
+    justify-content: right; */
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 15px;
     width: 380px;
@@ -22,8 +23,11 @@
 .quickActionContainer {
     float: right;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center;  */
+    position: absolute;
+    top: 52px;
+    right: 35px;
     padding-right: 10px;
     transition: 150ms;
 }
@@ -47,8 +51,9 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-right: auto;
-    margin-left: 10px;
+    position: absolute;
+    top: 50px;
+    left: 45px;
     transition: 150ms;
 }
 
@@ -58,8 +63,9 @@
     font-weight: med;
     color: #FFF;
     text-transform: capitalize;
-    margin-right: auto;
-    margin-left: -110px;
+    position: absolute;
+    top: 41px;
+    left: 95px;
     transition: 150ms;
 }
 
@@ -68,6 +74,36 @@
     align-items: baseline;
 }
 
-.contactCard.clicked .contactCardPFP {
-    
+.expandedContainer {
+    display: none;
+    position: absolute;
+}
+
+.contactCard.clicked .expandedContainer {
+    display: unset;
+}
+
+.expandedContainerBox {
+    background: rgb(0 0 0 / 14%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #FFF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui;
+    font-size: 11px;
+    height: 24px;
+    width: 110px;
+    position: absolute;
+    top: 75px;
+    left: 15px;
+    border-radius: 8px;
+}
+
+.expandedContainerBox:active {
+    background: #8bffe75e;
+    border: 1px solid #4ed0b5;
+    box-shadow: 0px 0px 8px #00fac680;
+    transition: 100ms;
 }

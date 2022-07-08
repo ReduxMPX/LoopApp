@@ -18,22 +18,24 @@
         window.location = "tel:18001234567";
     }
     function messageContact() {
-        window.location ="sms:18001234567;body=" + encodeURIComponent("");
+        window.location = "sms:18001234567;body=" + encodeURIComponent("");
     }
 </script>
 
 <body style="background: #353535;">
     <div class="cardContainer">
         <div class="contactCard">
-            <div class="contactCardQuickAction" style="left: 27A0px;" onclick="messageContact()">
+            <div class="quickActionContainer">
+                <div class="contactCardQuickAction" style="" onclick="messageContact()">
 
-                <i class="bi bi-chat" style="position: absolute;left: 10px;top: 9px;"></i>
+                    <i class="bi bi-chat" style=""></i>
 
-            </div>
-            <div class="contactCardQuickAction" style="left: 315px;" onclick="callContact()">
+                </div>
+                <div class="contactCardQuickAction" style="left: 315px;" onclick="callContact()">
 
-                <i class="bi bi-telephone" style="position: absolute;left: 10px;top: 9px;"></i>
+                    <i class="bi bi-telephone" style=""></i>
 
+                </div>
             </div>
         </div>
     </div>

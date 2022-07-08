@@ -9,18 +9,24 @@
     <link rel="stylesheet" type="text/css" href="Contact.css">
     <script src="Contact.js"></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
     <title>ContactHi</title>
 </head>
 <script>
     function callContact() {
-        window.location="tel:18001234567";
+        window.location = "tel:18001234567";
     }
 </script>
 
 <body style="background: #353535;">
     <div class="cardContainer">
-        <div class="contactCard" onclick="callContact()">
+        <div class="contactCard">
+            <div class="contactCardQuickAction" onclick="callContact()">
 
+                <i class="bi bi-telephone" style="position: absolute;left: 10px;top: 9px;"></i>
+
+            </div>
         </div>
     </div>
 </body>

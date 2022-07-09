@@ -1,3 +1,29 @@
+.authBox {
+    background: #0000002e;
+    border: 1px solid #40404096;
+    outline: none;
+    text-align: center;
+    border-radius: 8px;
+    width: 120px;
+    height: 40px;
+    font-size: 30px;
+    color: #FFF;
+    font-family: system-ui;
+    font-weight: 300;
+    letter-spacing: 2px;
+    caret-color: #404040;
+    /* margin: auto; */
+}
+
+.authContainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
 .cardContainer {
     position: relative;
     display: flex;

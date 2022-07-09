@@ -15,7 +15,7 @@
 
 <body style="background: #1f1f1f; overflow: hidden;">
     <div class="authContainer">
-        <input type="number" placeholder="0000"
+        <input type="number" pattern="\d*" placeholder="0000"
             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
             type="number" maxlength="4" class="authBox"></input>
     </div>

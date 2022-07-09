@@ -13,6 +13,7 @@
     letter-spacing: 2px;
     caret-color: #404040;
     padding-top: 2px;
+    transition: 100ms;
     /* margin: auto; */
 }
 
@@ -134,3 +135,37 @@
     box-shadow: 0px 0px 8px #00fac680;
     transition: 100ms;
 }
+
+
+.toasted.incorrect {
+    padding: 5px 20px;
+    min-height: 38px;
+    font-size: 14px;
+    line-height: 1em;
+    border-radius: 30px;
+    color: #fff;
+    background: linear-gradient(85deg,#ff415acc,#ff246ddb);
+    font-family: sans-serif;
+    font-weight: 700;
+    box-shadow: 0 0px 14px 0 #ff246ddb;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid #ffffff69;
+  }
+
+.toasted.venice {
+    padding: 5px 20px;
+    min-height: 38px;
+    font-size: 14px;
+    line-height: 1em;
+    border-radius: 30px;
+    color: #fff;
+    background: linear-gradient(85deg,#58bfa2cc,#24ff99db);
+    font-family: sans-serif;
+    font-weight: 700;
+    box-shadow: 0 4px 14px 0 rgb(91 91 91 / 51%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid #ffffff69;
+  }
+  

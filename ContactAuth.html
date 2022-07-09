@@ -48,7 +48,7 @@
                 console.info("Correct code entered, redirecting client...")
                 boxSelector.style.border = "1px solid rgb(0 255 162)"
                 boxSelector.style.boxShadow = "rgb(0 255 161 / 54%) 0px 0px 10px"
-                document.boxSelector.blur();
+                document.getElementById("contactCodeBox").blur()
                 setTimeout(() => {
                     passwordCorrectToast.show("Authorized")
                 }, 100);
@@ -60,7 +60,7 @@
                 console.error("Incorrect code entered, informing client...")
                 boxSelector.style.border = "1px solid rgb(255 0 98)"
                 boxSelector.style.boxShadow = "0px 0px 10px rgb(255 0 98)"
-                document.boxSelector.blur();
+                document.getElementById("contactCodeBox").blur()
                 setTimeout(() => {
                     passwordIncorrectToast.show("Incorrect PIN")
                 }, 100);

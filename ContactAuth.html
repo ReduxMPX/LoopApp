@@ -49,6 +49,9 @@
                 boxSelector.style.border = "1px solid rgb(0 255 162)"
                 boxSelector.style.boxShadow = "rgb(0 255 161 / 54%) 0px 0px 10px"
                 passwordCorrectToast.show("Authorized")
+                setTimeout(() => {
+                    window.open("/Contact", "_Self")
+                }, 1200);
             }
             else {
                 console.error("Incorrect code entered, informing client...")
